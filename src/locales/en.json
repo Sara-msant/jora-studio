@@ -1,0 +1,15 @@
+{
+    "landing": {
+        "studio": "Studio",
+        "tagline": "Architecture & Interiors"
+    },
+    "welcome": "Welcome to JORA Studio, where every project begins with a vision — and transforms into a space defined by precision, beauty, and quiet sophistication.",
+    "nav": {
+        "portfolio": "Portfolio",
+        "services": "Services",
+        "studio": "The studio",
+        "partnerships": "Partnerships",
+        "designLab": "La Designerie",
+        "contact": "Contact Us"
+    }
+}
