@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/$USER/public_html/
+    - export DEPLOYPATH="$HOME/etc/jora-studio.com/"
 
     # Go to the checked-out repo directory
     - cd $PWD
@@ -11,5 +11,5 @@ deployment:
     - /usr/bin/npm run build
 
     # Deploy only the build output (not the whole repo)
-    - /bin/rm -rf ${DEPLOYPATH:?}*
-    - /bin/cp -R dist/* $DEPLOYPATH
+    - /bin/rm -rf "${DEPLOYPATH:?}"*
+    - /bin/cp -R dist/* "$DEPLOYPATH"
