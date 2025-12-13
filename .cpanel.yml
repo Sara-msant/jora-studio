@@ -1,0 +1,15 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/$USER/public_html/
+
+    # Go to the checked-out repo directory
+    - cd $PWD
+
+    # Build the Vue/Vite app
+    - /usr/bin/npm ci
+    - /usr/bin/npm run build
+
+    # Deploy only the build output (not the whole repo)
+    - /bin/rm -rf ${DEPLOYPATH:?}*
+    - /bin/cp -R dist/* $DEPLOYPATH
