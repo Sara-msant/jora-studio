@@ -7,8 +7,8 @@ deployment:
     - cd $PWD
 
     # Build the Vue/Vite app
-    - /usr/bin/npm ci
-    - /usr/bin/npm run build
+    - /home/bin/npm ci
+    - /home/bin/npm run build
 
     # Deploy only the build output (not the whole repo)
     - /bin/rm -rf "${DEPLOYPATH:?}"*
