@@ -1,15 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH="$HOME/etc/jora-studio.com/"
-
-    # Go to the checked-out repo directory
-    - cd $PWD
-
-    # Build the Vue/Vite app
-    - /home/bin/npm ci
-    - /home/bin/npm run build
-
-    # Deploy only the build output (not the whole repo)
+    - export DEPLOYPATH="$HOME/public_html/"
     - /bin/rm -rf "${DEPLOYPATH:?}"*
     - /bin/cp -R dist/* "$DEPLOYPATH"
