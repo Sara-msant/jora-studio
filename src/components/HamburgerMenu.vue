@@ -1,6 +1,6 @@
 <template>
   <transition name="jora-menu-fade">
-    <div v-if="modelValue" class="jora-menu-overlay" @click.self="close">
+    <div v-if="menuOpen" class="jora-menu-overlay" @click.self="close">
       <div class="jora-menu">
         <div class="jora-menu-inner">
           <!-- Header -->
@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -63,7 +63,6 @@ const items = [
   { key: 'portfolio', labelKey: 'nav.portfolio', to: '/portfolio' },
   { key: 'services', labelKey: 'nav.services', to: '/services' },
   { key: 'studio', labelKey: 'nav.studio', to: '/studio' },
-  { key: 'partnerships', labelKey: 'nav.partnerships', to: '/partnerships' },
   { key: 'designLab', labelKey: 'nav.designLab', to: '/design-lab' },
   { key: 'contact', labelKey: 'nav.contact', to: '/contact' },
 ]
@@ -85,6 +84,13 @@ const go = (item: { to?: string }) => {
   if (item.to) router.push(item.to)
   close()
 }
+
+onMounted(() => {
+  const saved = localStorage.getItem('lang')
+  if (saved) {
+    locale.value = saved
+  }
+})
 </script>
 
 <style scoped>
@@ -203,5 +209,56 @@ const go = (item: { to?: string }) => {
 .social-link {
   color: #222;
   font-size: 1.3rem;
+}
+
+/* Lang dropdown */
+.jora-menu-lang-wrapper {
+  position: relative;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 12px;
+}
+
+.lang-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* the dropdown panel */
+.lang-list {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  z-index: 5;
+
+  min-width: 84px;
+  padding: 0.35rem;
+  margin: 0;
+
+  list-style: none;
+  border-radius: 14px;
+  background: #fff9c7;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* items */
+.lang-list li {
+  padding: 0.45rem 0.7rem;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lang-list li:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.lang-list li.active {
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
 }
 </style>

@@ -3,5 +3,12 @@
         "studio": "Studio",
         "tagline": "Arquitetura & Interiores"
     },
-    "welcome": "Bem-vindo ao JORA Studio, onde cada projeto nasce de uma visão — e se transforma num espaço definido pela precisão, pela beleza e por uma sofisticação discreta."
+    "welcome": "Bem-vindo ao JORA Studio, onde cada projeto nasce de uma visão — e se transforma num espaço definido pela precisão, pela beleza e por uma sofisticação discreta.",
+    "nav": {
+        "portfolio": "Portfólio",
+        "services": "Serviços",
+        "studio": "O estúdio",
+        "designLab": "La Designerie",
+        "contact": "Contacto"
+    }
 }
