@@ -1,6 +1,10 @@
 @import './base.css';
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
+:root {
+  --header-h: 70px; /* adjust to your real header height */
+}
+
 .jora {
   position: relative;
   min-height: 100vh;

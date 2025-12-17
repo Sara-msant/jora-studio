@@ -47,6 +47,7 @@ const goHome = () => {
   position: relative;
   z-index: 9999;
   color: #323542;
+  height: var(--header-h);
 }
 
 .jora-logo {
