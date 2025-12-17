@@ -1,7 +1,5 @@
 <template>
-  <div class="jora portfolio-page">
-    <Header />
-
+  <PageWrapper>
     <section class="portfolio-main">
       <div class="portfolio-grid-wrapper">
         <Carousel
@@ -45,13 +43,13 @@
         </Carousel>
       </div>
     </section>
-  </div>
+  </PageWrapper>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import Header from '@/components/Header.vue'
+import PageWrapper from '@/components/PageWrapper.vue'
 import { usePortfolioProjects, type PortfolioProject } from '@/composables/usePortfolioProjects'
 
 import 'vue3-carousel/carousel.css'
@@ -91,13 +89,6 @@ const breakpoints = {
 </script>
 
 <style scoped>
-.portfolio-page {
-  min-height: 100vh;
-  background: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Fill viewport minus fixed header.
    box-sizing keeps padding inside the height. */
 .portfolio-main {
