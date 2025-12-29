@@ -53,7 +53,7 @@ import PageWrapper from '@/components/PageWrapper.vue'
 
 const { locale } = useI18n()
 
-const modules = import.meta.glob('../assets/services/*/*.json', { eager: true })
+const modules = import.meta.glob('../assets/services/*/*.json', { eager: true }) as Record<string, any>
 const steps = computed(() => {
   const stepsByNum: Map<string, any> = new Map()
 
