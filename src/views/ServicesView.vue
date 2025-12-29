@@ -61,6 +61,7 @@ const steps = computed(() => {
     const parts = path.split('/')
     const lang = parts[parts.length - 2] // pt, fr, en
     const file = parts[parts.length - 1] // 01.json
+    if (!file || !lang) return
     const num = file.replace('.json', '') // 01
 
     if (!stepsByNum.has(num)) stepsByNum.set(num, {})
