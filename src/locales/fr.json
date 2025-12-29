@@ -8,8 +8,13 @@
         "portfolio": "Portfolio",
         "services": "Services",
         "studio": "Le studio",
-        "partnerships": "Partenariats",
         "designLab": "La Designerie",
         "contact": "Contact"
+    },
+    "project": {
+        "location": "Localisation:",
+        "status": "Statut:",
+        "area": "Surface:",
+        "year": "Année:"
     }
 }

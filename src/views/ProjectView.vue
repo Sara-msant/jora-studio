@@ -16,17 +16,17 @@
 
             <div class="project-meta">
               <!-- row 1 -->
-              <div v-if="project.location" class="meta-label">Project Location:</div>
+              <div v-if="project.location" class="meta-label">{{ t('project.location') }}</div>
               <div v-if="project.location" class="meta-value">{{ project.location }}</div>
 
-              <div v-if="project.status" class="meta-label">Status:</div>
+              <div v-if="project.status" class="meta-label">{{ t('project.status') }}</div>
               <div v-if="project.status" class="meta-value">{{ project.status }}</div>
 
               <!-- row 2 -->
-              <div v-if="project.area" class="meta-label">Project Area:</div>
+              <div v-if="project.area" class="meta-label">{{ t('project.area') }}</div>
               <div v-if="project.area" class="meta-value">{{ project.area }}</div>
 
-              <div v-if="project.year" class="meta-label">Year:</div>
+              <div v-if="project.year" class="meta-label">{{ t('project.year') }}</div>
               <div v-if="project.year" class="meta-value">{{ project.year }}</div>
             </div>
           </div>
@@ -93,10 +93,13 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
 import 'vue3-carousel/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
 import { usePortfolioProjects } from '@/composables/usePortfolioProjects'
+
+const { t } = useI18n()
 
 const route = useRoute()
 const router = useRouter()
@@ -192,16 +195,19 @@ const closeFullscreen = () => {
   letter-spacing: 0.14em;
   font-size: 0.8rem;
   font-weight: 700;
+  font-family: 'Geist Mono', monospace;
 }
 
 .meta-value {
   font-weight: 500;
+  font-family: 'Geist Mono', monospace;
 }
 
 .project-description {
   font-size: 0.85rem;
   line-height: 1.7;
   white-space: pre-line; /* preserve \n from JSON as real line breaks */
+  font-family: 'Geist Mono', monospace;
 }
 
 /* RIGHT: gallery column */

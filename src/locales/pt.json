@@ -10,5 +10,11 @@
         "studio": "O estúdio",
         "designLab": "La Designerie",
         "contact": "Contacto"
+    },
+    "project": {
+        "location": "Localização:",
+        "status": "Status:",
+        "area": "Área:",
+        "year": "Ano:"
     }
 }

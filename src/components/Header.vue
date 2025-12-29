@@ -2,7 +2,7 @@
   <header class="jora-header" :class="{ 'jora-white': isWhite }">
     <div class="jora-logo" @click="goHome">
       <div class="logo-main">JORA.</div>
-      <div class="logo-sub">Studio</div>
+      <div class="logo-sub alumni-sans">Studio</div>
     </div>
 
     <button class="jora-menu" type="button" aria-label="Open menu" @click="isMenuOpen = true">
@@ -59,12 +59,13 @@ const goHome = () => {
 
 .logo-main {
   font-weight: 700;
-  font-size: 1.75rem;
-  letter-spacing: 0.1em;
+  font-size: 2.75rem;
+  line-height: 2.75rem;
 }
 
 .logo-sub {
-  font-size: 0.9rem;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .jora-menu {

@@ -65,7 +65,6 @@ const goToProject = (project: PortfolioProject) => {
 // Pair projects into columns of 2: [top, bottom]
 const projectColumns = computed(() => {
   const cols: Array<{ key: string; top?: PortfolioProject; bottom?: PortfolioProject }> = []
-  console.log('project', projects)
   for (let i = 0; i < projects.value.length; i += 2) {
     const top = projects.value[i]
     const bottom = projects.value[i + 1]
