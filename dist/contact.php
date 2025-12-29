@@ -1,0 +1,101 @@
+<?php
+// contact.php - receives JSON from the contact form and relays via email using Namecheap Private Email SMTP.
+// Fill in the SMTP credentials below. If PHPMailer is not installed, a basic mail() fallback is used.
+
+header('Content-Type: application/json');
+header('Access-Control-Allow-Methods: POST');
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['error' => 'Method not allowed']);
+    exit;
+}
+
+$input = json_decode(file_get_contents('php://input'), true) ?: [];
+$required = ['name', 'email', 'description'];
+foreach ($required as $field) {
+    if (empty($input[$field])) {
+        http_response_code(400);
+        echo json_encode(['error' => "Missing $field"]);
+        exit;
+    }
+}
+
+// Configure these values for your mailbox.
+$fromAddress = 'hello@jorastudio.com'; // must be your Namecheap Private Email mailbox
+$fromName    = 'Jora Studio Site';
+$toAddress   = 'hello@jorastudio.com'; // where you want to receive the leads
+$smtpUser    = 'hello@jorastudio.com'; // SMTP username (full mailbox)
+$smtpPass    = 'Success1000*';
+$smtpHost    = 'mail.privateemail.com';
+$smtpPort    = 587; // use 465 if you prefer SSL
+$smtpSecure  = 'tls'; // 'ssl' for port 465
+
+$fullName = trim(($input['name'] ?? '') . ' ' . ($input['surname'] ?? ''));
+$subject = 'New contact form submission';
+$body = "Name: {$fullName}\n"
+      . "Email: {$input['email']}\n"
+      . "Phone: " . ($input['phone'] ?? '') . "\n"
+      . "Location: " . ($input['location'] ?? '') . "\n"
+      . "Type: " . ($input['type'] ?? '') . "\n"
+      . "Description:\n" . ($input['description'] ?? '') . "\n";
+
+$sent = false;
+$error = null;
+
+// Try PHPMailer if available (vendor/autoload.php expected in same directory or parent).
+$autoloadPaths = [__DIR__ . '/vendor/autoload.php', __DIR__ . '/../vendor/autoload.php'];
+$autoload = null;
+foreach ($autoloadPaths as $path) {
+    if (file_exists($path)) {
+        $autoload = $path;
+        break;
+    }
+}
+
+if ($autoload) {
+    require_once $autoload;
+    try {
+        $mailer = new PHPMailer\PHPMailer\PHPMailer(true);
+        $mailer->isSMTP();
+        $mailer->Host = $smtpHost;
+        $mailer->SMTPAuth = true;
+        $mailer->Username = $smtpUser;
+        $mailer->Password = $smtpPass;
+        $mailer->SMTPSecure = $smtpSecure === 'ssl'
+            ? PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS
+            : PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+        $mailer->Port = $smtpPort;
+
+        $mailer->setFrom($fromAddress, $fromName);
+        $mailer->addAddress($toAddress);
+        $mailer->addReplyTo($input['email'], $fullName);
+        $mailer->Subject = $subject;
+        $mailer->Body = $body;
+
+        $mailer->send();
+        $sent = true;
+    } catch (Throwable $e) {
+        $error = $e->getMessage();
+    }
+}
+
+// Fallback to PHP mail() if PHPMailer is unavailable.
+if (!$sent) {
+    $headers = [];
+    $headers[] = 'From: ' . $fromAddress;
+    $headers[] = 'Reply-To: ' . $input['email'];
+    $headers[] = 'Content-Type: text/plain; charset=UTF-8';
+    $sent = mail($toAddress, $subject, $body, implode("\r\n", $headers));
+    if (!$sent && !$error) {
+        $error = 'mail() failed';
+    }
+}
+
+if ($sent) {
+    echo json_encode(['ok' => true]);
+} else {
+    http_response_code(500);
+    echo json_encode(['error' => 'Mail failed', 'detail' => $error]);
+}
+*** End of File

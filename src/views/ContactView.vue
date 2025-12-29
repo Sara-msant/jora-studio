@@ -118,7 +118,11 @@
               By submitting your data, you are giving us permission to use the information to assist you and contact you. Don't worry, we can reassure the entirety of your data is secure.
             </p>
 
-            <button type="submit" class="submit-btn">Submit</button>
+            <button type="submit" class="submit-btn" :disabled="loading">
+              {{ loading ? 'Sending...' : 'Submit' }}
+            </button>
+            <p v-if="status === 'ok'" class="form-status success">Thanks! We received your message.</p>
+            <p v-if="status === 'error'" class="form-status error">Sorry, something went wrong. Please try again later.</p>
           </form>
         </div>
       </section>
@@ -140,9 +144,47 @@ const form = ref({
   description: '',
 })
 
-const handleSubmit = () => {
-  // TODO: Implement form submission logic
-  console.log('Form submitted:', form.value)
+const loading = ref(false)
+const status = ref<'idle' | 'ok' | 'error'>('idle')
+
+const handleSubmit = async () => {
+  status.value = 'idle'
+
+  if (!form.value.name || !form.value.email || !form.value.description) {
+    status.value = 'error'
+    alert('Please fill name, email, and project description.')
+    return
+  }
+
+  loading.value = true
+
+  try {
+    const res = await fetch('/contact.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form.value),
+    })
+
+    if (!res.ok) {
+      throw new Error('Request failed')
+    }
+
+    status.value = 'ok'
+    form.value = {
+      name: '',
+      surname: '',
+      email: '',
+      phone: '',
+      location: '',
+      type: '',
+      description: '',
+    }
+  } catch (error) {
+    console.error(error)
+    status.value = 'error'
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 
@@ -333,6 +375,25 @@ const handleSubmit = () => {
 
 .submit-btn:hover {
   background: #1a1d24;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-status {
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  font-family: 'Geist Mono', monospace;
+}
+
+.form-status.success {
+  color: #2e7d32;
+}
+
+.form-status.error {
+  color: #b71c1c;
 }
 
 @media (max-width: 768px) {
