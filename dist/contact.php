@@ -43,18 +43,13 @@ $body = "Name: {$fullName}\n"
 $sent = false;
 $error = null;
 
-// Try PHPMailer if available (vendor/autoload.php expected in same directory or parent).
-$autoloadPaths = [__DIR__ . '/vendor/autoload.php', __DIR__ . '/../vendor/autoload.php'];
-$autoload = null;
-foreach ($autoloadPaths as $path) {
-    if (file_exists($path)) {
-        $autoload = $path;
-        break;
-    }
-}
+// Try PHPMailer using a manually extracted copy in public/PHPMailer.
+$phpMailerBase = __DIR__ . '/PHPMailer/src';
+if (is_dir($phpMailerBase)) {
+    require_once $phpMailerBase . '/Exception.php';
+    require_once $phpMailerBase . '/PHPMailer.php';
+    require_once $phpMailerBase . '/SMTP.php';
 
-if ($autoload) {
-    require_once $autoload;
     try {
         $mailer = new PHPMailer\PHPMailer\PHPMailer(true);
         $mailer->isSMTP();
