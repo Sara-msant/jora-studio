@@ -64,7 +64,7 @@ const items = [
   { key: 'services', labelKey: 'nav.services', to: '/services' },
   { key: 'studio', labelKey: 'nav.studio', to: '/studio' },
   { key: 'designLab', labelKey: 'nav.designLab', to: '/design-lab' },
-  { key: 'contact', labelKey: 'nav.contact', to: '/contact' },
+  { key: 'contact', labelKey: 'nav.contact', to: '/contact-us' },
 ]
 
 const currentLocaleLabel = computed(() => locale.value.toUpperCase())
