@@ -15,7 +15,8 @@
             <div class="contact-header">
               <h1 class="contact-title">Contact Us</h1>
               <p class="contact-description">
-                We'd love to hear from you. Whether you're planning a new project or exploring ideas, our team will guide you through each step — from concept to completion.
+                We'd love to hear from you. Whether you're planning a new project or exploring
+                ideas, our team will guide you through each step — from concept to completion.
               </p>
             </div>
 
@@ -115,14 +116,19 @@
             </div>
 
             <p class="form-disclaimer">
-              By submitting your data, you are giving us permission to use the information to assist you and contact you. Don't worry, we can reassure the entirety of your data is secure.
+              By submitting your data, you are giving us permission to use the information to assist
+              you and contact you. Don't worry, we can reassure the entirety of your data is secure.
             </p>
 
             <button type="submit" class="submit-btn" :disabled="loading">
               {{ loading ? 'Sending...' : 'Submit' }}
             </button>
-            <p v-if="status === 'ok'" class="form-status success">Thanks! We received your message.</p>
-            <p v-if="status === 'error'" class="form-status error">Sorry, something went wrong. Please try again later.</p>
+            <p v-if="status === 'ok'" class="form-status success">
+              Thanks! We received your message.
+            </p>
+            <p v-if="status === 'error'" class="form-status error">
+              Sorry, something went wrong. Please try again later.
+            </p>
           </form>
         </div>
       </section>
@@ -294,7 +300,6 @@ const handleSubmit = async () => {
   line-height: 1.6;
   font-family: 'Geist Mono', monospace;
 }
-
 
 /* Contact Form */
 .contact-form {
