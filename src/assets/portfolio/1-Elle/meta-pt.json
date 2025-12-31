@@ -1,11 +1,11 @@
 {
-    "title": "Elle",
-    "type": "Apartamento",
-    "location": "Faro, Portugal",
-    "area": "125 m²",
-    "year": 2025,
-    "status": "Em Andamento",
-    "description": "Situado no coração do centro histórico de Olhão, este projeto de renovação reimagina um edifício tradicional em duas casas contemporâneas independentes.\n\nA estrutura original foi completamente redesenhada para melhorar o fluxo espacial, o conforto e a luz.\nFoi adicionado um nível de telhado para acomodar um quarto adicional, estendendo o espaço de vida verticalmente enquanto preserva o caráter autêntico do edifício.\n\nCada residência abrange aproximadamente 120 metros quadrados e apresenta dois quartos, uma casa de banho, um WC de convidado, uma cozinha, área de jantar e uma varanda no andar superior — criando um diálogo entre patrimônio e vida contemporânea.\n\nAtravés de planejamento espacial criterioso e refinamento de materiais, o projeto celebra o charme da cidade velha de Olhão enquanto oferece uma sensação renovada de elegância contemporânea.",
+    "title": "ARQ_P01",
+    "type": "Moradia Unifamiliar",
+    "location": "Condeixa, Coimbra",
+    "area": "285 m²",
+    "year": 2021,
+    "status": "Construído",
+    "description": "O projeto nasce sob o conceito de Impluvium, entendido como dispositivo espacial de luz, orientação e relação com a paisagem. A implantação responde diretamente à topografia do terreno, assumindo como premissas fundamentais a orientação solar e o desafogo visual.\n\nA volumetria organiza-se a partir de dois corpos principais que se articulam numa forma em L, estabelecendo um diálogo claro entre cheios e vazios. A interseção destes volumes constitui o gesto estruturante do projeto, permitindo a separação funcional entre as zonas Day e Night e definindo a lógica de uso da habitação.\n\nA partir deste gesto inicial, o conjunto prolonga-se num terceiro corpo contínuo, que fecha a composição em três volumes e consolida a leitura do edifício. As intersecções volumétricas resolvem de forma coerente a expressão dos alçados, tanto para o exterior como para o espaço interior central — um semi-claustro onde a piscina assume um papel central, organizador e atmosférico.\n\nO claustro é finalmente completado por um quarto elemento não edificado: um vazio habitado pela paisagem, que encerra o sistema do Impluvium e reforça a relação entre arquitetura, luz e território.",
     "order": 1,
-    "slug": "sao-pedro"
+    "slug": "ARQ_P01"
 }
