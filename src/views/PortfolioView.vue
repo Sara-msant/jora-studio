@@ -113,29 +113,6 @@ const breakpoints = {
   cursor: pointer;
 }
 
-/* Viewport: gutters + fade edges */
-.portfolio-carousel :deep(.carousel__viewport) {
-  overflow: hidden;
-  box-sizing: border-box;
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    black 40px,
-    black calc(100% - 40px),
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    black 40px,
-    black calc(100% - 40px),
-    transparent 100%
-  );
-}
-
 /* Track: minimal padding + small nudge */
 .portfolio-carousel :deep(.carousel__track) {
   padding: 0.25rem 0;
@@ -146,13 +123,6 @@ const breakpoints = {
 .portfolio-carousel :deep(.carousel__slide) {
   padding: 0 0.75rem;
   box-sizing: border-box;
-}
-
-/* Track spacers so first/last cards don’t get clipped by viewport/mask */
-.portfolio-carousel :deep(.carousel__track)::before,
-.portfolio-carousel :deep(.carousel__track)::after {
-  content: '';
-  flex: 0 0 74px;
 }
 
 .portfolio-col {
@@ -168,7 +138,6 @@ const breakpoints = {
   background: #fff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   display: flex;
 }
 
