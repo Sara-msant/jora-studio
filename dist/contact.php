@@ -21,15 +21,14 @@ foreach ($required as $field) {
     }
 }
 
-// Configure these values for your mailbox.
-$fromAddress = 'hello@jorastudio.com'; // must be your Namecheap Private Email mailbox
+$fromAddress = 'hello@jora-studio.com';
 $fromName    = 'Jora Studio Site';
-$toAddress   = 'hello@jorastudio.com'; // where you want to receive the leads
-$smtpUser    = 'hello@jorastudio.com'; // SMTP username (full mailbox)
+$toAddress   = 'hello@jora-studio.com';
+$smtpUser    = 'hello@jora-studio.com';
 $smtpPass    = 'Success1000*';
 $smtpHost    = 'mail.privateemail.com';
-$smtpPort    = 465; // use 465 for SSL
-$smtpSecure  = 'ssl'; // 'ssl' for port 465
+$smtpPort    = 465;
+$smtpSecure  = 'ssl';
 
 $fullName = trim(($input['name'] ?? '') . ' ' . ($input['surname'] ?? ''));
 $subject = 'New contact form submission';
