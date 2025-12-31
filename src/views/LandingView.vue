@@ -75,15 +75,15 @@ const goToWelcome = () => {
 }
 
 .landing-studio {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
   color: #f4f5f7;
 }
 
 .landing-tagline {
   margin-top: 0.25rem;
-  font-size: 0.9rem;
-  line-height: 0.9rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #c3c6d0;

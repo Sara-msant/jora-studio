@@ -173,8 +173,8 @@ const breakpoints = {
 }
 
 .portfolio-card-title {
-  font-size: 1.1rem;
-  line-height: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
   font-weight: 600;
   letter-spacing: 0.05em;
 }
