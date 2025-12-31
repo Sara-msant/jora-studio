@@ -163,7 +163,6 @@ const breakpoints = {
 }
 
 .portfolio-card-overlay-content {
-  text-align: center;
   color: #fff;
   padding: 1rem;
   transform: translateY(6px);
@@ -175,14 +174,16 @@ const breakpoints = {
 
 .portfolio-card-title {
   font-size: 1.1rem;
+  line-height: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.05em;
 }
 
 .portfolio-card-subtitle {
-  margin-top: 0.25rem;
   font-size: 0.85rem;
+  line-height: 0.95rem;
   opacity: 0.85;
+  font-family: 'Geist Mono', monospace;
 }
 
 @media (hover: hover) {
