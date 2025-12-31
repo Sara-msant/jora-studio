@@ -65,6 +65,10 @@
                 </figure>
               </Slide>
             </template>
+
+            <template #addons>
+              <Navigation />
+            </template>
           </Carousel>
 
           <!-- FULLSCREEN OVERLAY -->
@@ -104,7 +108,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
 import 'vue3-carousel/carousel.css'
-import { Carousel, Slide } from 'vue3-carousel'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 import { usePortfolioProjects } from '@/composables/usePortfolioProjects'
 
 const { t } = useI18n()
@@ -262,6 +266,16 @@ const closeFullscreen = () => {
 :deep(.carousel__viewport) {
   overflow: hidden;
   height: 100%;
+}
+
+.project-carousel :deep(.carousel__prev),
+.project-carousel :deep(.carousel__next) {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
 }
 
 /* base slide card */
