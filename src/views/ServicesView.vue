@@ -16,16 +16,7 @@
               @click="toggle(i)"
             >
               <div class="step-title">{{ step.title }}</div>
-              <svg
-                class="chev"
-                width="14"
-                height="10"
-                viewBox="0 0 12 8"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden
-              >
-                <path d="M6 8L0.803848 0.5L11.1962 0.5L6 8Z" fill="currentColor" />
-              </svg>
+              <span class="chev">▼</span>
             </button>
 
             <div class="accordion-body">
@@ -53,7 +44,10 @@ import PageWrapper from '@/components/PageWrapper.vue'
 
 const { locale } = useI18n()
 
-const modules = import.meta.glob('../assets/services/*/*.json', { eager: true }) as Record<string, any>
+const modules = import.meta.glob('../assets/services/*/*.json', { eager: true }) as Record<
+  string,
+  any
+>
 const steps = computed(() => {
   const stepsByNum: Map<string, any> = new Map()
 
@@ -144,9 +138,9 @@ const toggle = (i: number) => {
 }
 
 .highlight {
-  flex: 0 0 35%;
+  flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   align-self: flex-end;
 }
@@ -236,11 +230,15 @@ const toggle = (i: number) => {
   .services-main {
     flex-direction: column;
     padding: 2rem;
+    height: auto;
+    min-height: auto;
   }
 
   .highlight {
-    align-self: flex-end;
+    align-self: stretch;
     display: flex;
+    width: 100%;
+    justify-content: center;
   }
 
   .card {

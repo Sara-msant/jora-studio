@@ -8,7 +8,7 @@
             <div class="jora-menu-lang-wrapper">
               <button class="lang-toggle" @click="langOpen = !langOpen">
                 <span>{{ currentLocaleLabel }}</span>
-                <v-icon size="18">mdi-menu-down</v-icon>
+                <span class="dropdown-arrow">▼</span>
               </button>
 
               <ul v-if="langOpen" class="lang-list">
@@ -35,9 +35,30 @@
 
           <!-- Social -->
           <footer class="jora-menu-footer">
-            <a href="#" class="social-link"><v-icon>mdi-facebook</v-icon></a>
-            <a href="#" class="social-link"><v-icon>mdi-instagram</v-icon></a>
-            <a href="#" class="social-link"><v-icon>mdi-twitter</v-icon></a>
+            <a
+              href="https://www.facebook.com/JORA.Studio.Architecture"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <v-icon>fab fa-facebook</v-icon>
+            </a>
+            <a
+              href="https://www.instagram.com/jorastudio_architecture/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <v-icon>fab fa-instagram</v-icon>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jorastudio-architecture-6528893a0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <v-icon>fab fa-linkedin</v-icon>
+            </a>
           </footer>
         </div>
       </div>
@@ -111,7 +132,7 @@ onMounted(() => {
   border-radius: 24px;
   box-shadow: 0 22px 45px rgba(0, 0, 0, 0.25);
 
-  width: clamp(260px, 28vw, 340px);
+  width: clamp(240px, 24vw, 300px);
   margin-top: 2.2rem;
 
   pointer-events: auto;
@@ -190,6 +211,7 @@ onMounted(() => {
   border: none;
   text-align: left;
   font-size: 1rem;
+  font-family: 'Geist Mono', monospace;
   cursor: pointer;
   padding: 0.1rem 0;
   color: #333;
@@ -222,6 +244,11 @@ onMounted(() => {
   gap: 0.35rem;
   padding: 0.45rem 0.7rem;
   border-radius: 12px;
+}
+
+.dropdown-arrow {
+  font-size: 0.8rem;
+  line-height: 1;
 }
 
 .lang-toggle:hover {
