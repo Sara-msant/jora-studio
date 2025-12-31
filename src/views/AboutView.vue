@@ -106,11 +106,10 @@ const images = {
 
 <style scoped>
 .about-main {
-  height: calc(100vh - var(--header-h) - 4rem);
+  min-height: calc(100vh - var(--header-h) - 4rem);
   padding: 3.25rem 2rem 2rem;
   box-sizing: border-box;
   display: flex;
-  min-height: 0;
 }
 
 .about-grid {
@@ -193,7 +192,7 @@ const images = {
   max-width: 620px;
   background: #fff36b;
   border-radius: 18px;
-  padding: 2.25rem 2.25rem 2rem;
+  padding: 2rem 2rem 1.8rem;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
 }
 
@@ -216,6 +215,7 @@ const images = {
   font-size: 0.92rem;
   line-height: 1.55;
   color: rgba(0, 0, 0, 0.78);
+  font-family: 'Geist Mono', monospace;
 }
 
 .note-body p {
