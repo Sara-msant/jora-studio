@@ -4,8 +4,10 @@
 
     <section v-if="project" class="project-main">
       <div class="project-layout">
-        <!-- LEFT: info card -->
-        <aside class="project-info">
+        <div class="project-info-wrapper">
+          <button class="project-back" type="button" @click="goToPortfolio">← Back</button>
+          <!-- LEFT: info card -->
+          <aside class="project-info">
           <div>
             <div class="project-header-row">
               <h1 class="project-title">{{ project.title }}.</h1>
@@ -35,6 +37,7 @@
             {{ project.description }}
           </p>
         </aside>
+        </div>
 
         <!-- RIGHT: vue3-carousel gallery -->
         <section class="project-gallery-wrapper">
@@ -128,6 +131,10 @@ const goToPrevious = () => {
   router.push({ name: 'project', params: { slug: prevSlug.value } })
 }
 
+const goToPortfolio = () => {
+  router.push({ name: 'portfolio' })
+}
+
 const slideClass = (index: number, current: number) => {
   if (index === current) return 'is-center'
   if (index === current - 1) return 'is-left'
@@ -153,6 +160,16 @@ const closeFullscreen = () => {
   box-sizing: border-box;
 }
 
+.project-back {
+  border: none;
+  background: transparent;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
 /* 30% left, 70% right */
 .project-layout {
   display: grid;
@@ -160,6 +177,12 @@ const closeFullscreen = () => {
   gap: 3rem;
   align-items: stretch;
   min-height: 100%;
+}
+
+.project-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* LEFT: yellow info card */
@@ -171,6 +194,7 @@ const closeFullscreen = () => {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
+  position: relative;
 }
 
 .project-title {
