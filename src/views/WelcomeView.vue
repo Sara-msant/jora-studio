@@ -5,12 +5,6 @@
     <main class="content">
       <p ref="typeTarget" class="text typewriter-js"></p>
     </main>
-
-    <footer class="footer">
-      <a :href="instagramHref" class="social">
-        <v-icon>mdi-instagram</v-icon>
-      </a>
-    </footer>
   </div>
 </template>
 
