@@ -7,23 +7,21 @@
       </div>
 
       <div class="landing-subtitle">
-        <div class="landing-studio">{{ t('landing.studio') }}</div>
-        <div class="landing-tagline">{{ t('landing.tagline') }}</div>
+        <div class="landing-studio">Studio</div>
+        <div class="landing-tagline">Architecture & Interiors</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 
-const { t } = useI18n();
-const router = useRouter();
+const router = useRouter()
 
 const goToWelcome = () => {
-  router.push({ name: 'welcome' });
-};
+  router.push({ name: 'welcome' })
+}
 </script>
 
 <style scoped>
@@ -33,7 +31,7 @@ const goToWelcome = () => {
   background-color: #262a36;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   padding: 4vw 6vw;
   box-sizing: border-box;
   cursor: pointer;
@@ -47,7 +45,7 @@ const goToWelcome = () => {
 /* "JORA" wordmark */
 .landing-wordmark {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 1.5rem;
 }
 
@@ -57,7 +55,7 @@ const goToWelcome = () => {
   font-weight: 400;
   font-size: clamp(4rem, 16vw, 13rem);
   /* responsive, big on desktop */
-  line-height: 1;
+  line-height: 0.7;
   color: #f4f5f7;
 }
 
@@ -73,18 +71,19 @@ const goToWelcome = () => {
 /* Subtitle text */
 .landing-subtitle {
   margin-top: 1.5rem;
+  font-family: 'Alumni Sans', sans-serif;
 }
 
 .landing-studio {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1.5rem;
+  line-height: 1.5rem;
   color: #f4f5f7;
 }
 
 .landing-tagline {
   margin-top: 0.25rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 0.9rem;
+  line-height: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #c3c6d0;
