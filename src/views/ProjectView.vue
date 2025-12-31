@@ -8,35 +8,35 @@
           <button class="project-back" type="button" @click="goToPortfolio">← Back</button>
           <!-- LEFT: info card -->
           <aside class="project-info">
-          <div>
-            <div class="project-header-row">
-              <h1 class="project-title">{{ project.title }}.</h1>
-              <div class="project-type">{{ project.type }}</div>
+            <div>
+              <div class="project-header-row">
+                <h1 class="project-title">{{ project.title }}.</h1>
+                <div class="project-type">{{ project.type }}</div>
+              </div>
+
+              <hr class="project-divider" />
+
+              <div class="project-meta">
+                <!-- row 1 -->
+                <div v-if="project.location" class="meta-label">{{ t('project.location') }}</div>
+                <div v-if="project.location" class="meta-value">{{ project.location }}</div>
+
+                <div v-if="project.status" class="meta-label">{{ t('project.status') }}</div>
+                <div v-if="project.status" class="meta-value">{{ project.status }}</div>
+
+                <!-- row 2 -->
+                <div v-if="project.area" class="meta-label">{{ t('project.area') }}</div>
+                <div v-if="project.area" class="meta-value">{{ project.area }}</div>
+
+                <div v-if="project.year" class="meta-label">{{ t('project.year') }}</div>
+                <div v-if="project.year" class="meta-value">{{ project.year }}</div>
+              </div>
             </div>
 
-            <hr class="project-divider" />
-
-            <div class="project-meta">
-              <!-- row 1 -->
-              <div v-if="project.location" class="meta-label">{{ t('project.location') }}</div>
-              <div v-if="project.location" class="meta-value">{{ project.location }}</div>
-
-              <div v-if="project.status" class="meta-label">{{ t('project.status') }}</div>
-              <div v-if="project.status" class="meta-value">{{ project.status }}</div>
-
-              <!-- row 2 -->
-              <div v-if="project.area" class="meta-label">{{ t('project.area') }}</div>
-              <div v-if="project.area" class="meta-value">{{ project.area }}</div>
-
-              <div v-if="project.year" class="meta-label">{{ t('project.year') }}</div>
-              <div v-if="project.year" class="meta-value">{{ project.year }}</div>
-            </div>
-          </div>
-
-          <p class="project-description">
-            {{ project.description }}
-          </p>
-        </aside>
+            <p class="project-description">
+              {{ project.description }}
+            </p>
+          </aside>
         </div>
 
         <!-- RIGHT: vue3-carousel gallery -->

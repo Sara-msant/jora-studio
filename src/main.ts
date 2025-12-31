@@ -7,7 +7,6 @@ import './assets/main.css'
 
 import i18n from './i18n'
 import vuetify from './plugins/vuetify'
-import '@mdi/font/css/materialdesignicons.css'
 
 const app = createApp(App)
 
