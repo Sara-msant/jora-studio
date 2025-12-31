@@ -28,8 +28,8 @@ $toAddress   = 'hello@jorastudio.com'; // where you want to receive the leads
 $smtpUser    = 'hello@jorastudio.com'; // SMTP username (full mailbox)
 $smtpPass    = 'Success1000*';
 $smtpHost    = 'mail.privateemail.com';
-$smtpPort    = 587; // use 587 for TLS
-$smtpSecure  = 'tls'; // 'tls' for port 587
+$smtpPort    = 465; // use 465 for SSL
+$smtpSecure  = 'ssl'; // 'ssl' for port 465
 
 $fullName = trim(($input['name'] ?? '') . ' ' . ($input['surname'] ?? ''));
 $subject = 'New contact form submission';
@@ -64,6 +64,7 @@ if (is_dir($phpMailerBase)) {
             ? PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS
             : PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
         $mailer->Port = $smtpPort;
+        $mailer->SMTPAutoTLS = false;
 
         $mailer->setFrom($fromAddress, $fromName);
         $mailer->addAddress($toAddress);
