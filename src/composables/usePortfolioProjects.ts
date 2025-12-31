@@ -138,9 +138,17 @@ export const usePortfolioProjects = () => {
     return projects.value[nextIdx]?.slug
   }
 
+  const getPreviousProjectSlug = (slug: string) => {
+    const idx = projects.value.findIndex((p) => p.slug === slug)
+    if (idx === -1) return undefined
+    const prevIdx = (idx - 1 + projects.value.length) % projects.value.length
+    return projects.value[prevIdx]?.slug
+  }
+
   return {
     projects,
     getProjectBySlug,
     getNextProjectSlug,
+    getPreviousProjectSlug,
   }
 }

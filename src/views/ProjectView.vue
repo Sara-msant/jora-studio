@@ -77,9 +77,14 @@
             />
           </div>
 
-          <button v-if="nextSlug" class="project-next" type="button" @click="goToNext">
-            Next →
-          </button>
+          <div class="project-buttons">
+            <button v-if="prevSlug" class="project-prev" type="button" @click="goToPrevious">
+              ← Previous
+            </button>
+            <button v-if="nextSlug" class="project-next" type="button" @click="goToNext">
+              Next →
+            </button>
+          </div>
         </section>
       </div>
     </section>
@@ -103,7 +108,7 @@ const { t } = useI18n()
 
 const route = useRoute()
 const router = useRouter()
-const { getProjectBySlug, getNextProjectSlug } = usePortfolioProjects()
+const { getProjectBySlug, getNextProjectSlug, getPreviousProjectSlug } = usePortfolioProjects()
 
 const isFullscreen = ref(false)
 const fullscreenIndex = ref(0)
@@ -111,10 +116,16 @@ const fullscreenIndex = ref(0)
 const slug = computed(() => route.params.slug as string)
 const project = computed(() => getProjectBySlug(slug.value) ?? null)
 const nextSlug = computed(() => getNextProjectSlug(slug.value))
+const prevSlug = computed(() => getPreviousProjectSlug(slug.value))
 
 const goToNext = () => {
   if (!nextSlug.value) return
   router.push({ name: 'project', params: { slug: nextSlug.value } })
+}
+
+const goToPrevious = () => {
+  if (!prevSlug.value) return
+  router.push({ name: 'project', params: { slug: prevSlug.value } })
 }
 
 const slideClass = (index: number, current: number) => {
@@ -163,16 +174,16 @@ const closeFullscreen = () => {
 }
 
 .project-title {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
 }
 
 .project-type {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.12em;
+  font-family: 'Alumni Sans', sans-serif;
 }
 
 .project-divider {
@@ -191,7 +202,6 @@ const closeFullscreen = () => {
 }
 
 .meta-label {
-  text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.8rem;
   font-weight: 700;
@@ -278,9 +288,15 @@ const closeFullscreen = () => {
 }
 
 /* "Next" button */
-.project-next {
-  align-self: flex-end;
+.project-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
   margin-top: 1rem;
+}
+
+.project-prev,
+.project-next {
   border: none;
   background: transparent;
   font-size: 0.85rem;
