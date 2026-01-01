@@ -19,6 +19,7 @@
                 <div class="portfolio-card-overlay-content">
                   <div class="portfolio-card-title">{{ col.top.title }}</div>
                   <div class="portfolio-card-subtitle">{{ col.top.type }}</div>
+                  <div class="portfolio-card-location">{{ col.top.location }}</div>
                 </div>
               </div>
             </article>
@@ -30,6 +31,7 @@
                 <div class="portfolio-card-overlay-content">
                   <div class="portfolio-card-title">{{ col.bottom.title }}</div>
                   <div class="portfolio-card-subtitle">{{ col.bottom.type }}</div>
+                  <div class="portfolio-card-location">{{ col.bottom.location }}</div>
                 </div>
               </div>
             </article>
@@ -177,6 +179,13 @@ const breakpoints = {
   font-family: 'Geist Mono', monospace;
 }
 
+.portfolio-card-location {
+  font-size: 0.65rem;
+  line-height: 0.75rem;
+  opacity: 0.85;
+  font-family: 'Geist Mono', monospace;
+}
+
 @media (hover: hover) {
   .portfolio-card:hover .portfolio-card-overlay {
     opacity: 1;
@@ -190,12 +199,10 @@ const breakpoints = {
 
 .portfolio-carousel :deep(.carousel__prev),
 .portfolio-carousel :deep(.carousel__next) {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background: transparent;
+  color: #323542;
   border: none;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 600px) {
@@ -205,6 +212,19 @@ const breakpoints = {
 
   .portfolio-col {
     gap: 1rem;
+  }
+
+  .portfolio-card-overlay {
+    background: transparent;
+    opacity: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .portfolio-card-overlay-content {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 1rem;
   }
 
   /* smaller spacers on mobile */

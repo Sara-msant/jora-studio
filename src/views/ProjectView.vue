@@ -2,9 +2,10 @@
   <PageWrapper>
     <section v-if="project">
       <div class="project-layout">
-        <div class="project-info-wrapper">
-          <button class="project-back" type="button" @click="goToPortfolio">← Back</button>
-          <!-- LEFT: info card -->
+        <button class="project-back" type="button" @click="goToPortfolio">← Back</button>
+
+        <!-- LEFT: info card -->
+        <aside class="project-info-wrapper">
           <aside class="project-info">
             <div>
               <div class="project-header-row">
@@ -35,7 +36,7 @@
               {{ project.description }}
             </p>
           </aside>
-        </div>
+        </aside>
 
         <!-- RIGHT: vue3-carousel gallery -->
         <section class="project-gallery-wrapper">
@@ -81,16 +82,16 @@
               :alt="'Image ' + (fullscreenIndex + 1)"
             />
           </div>
-
-          <div class="project-buttons">
-            <button v-if="prevSlug" class="project-prev" type="button" @click="goToPrevious">
-              ← Previous
-            </button>
-            <button v-if="nextSlug" class="project-next" type="button" @click="goToNext">
-              Next →
-            </button>
-          </div>
         </section>
+
+        <div class="project-buttons">
+          <button v-if="prevSlug" class="project-prev" type="button" @click="goToPrevious">
+            ← Previous
+          </button>
+          <button v-if="nextSlug" class="project-next" type="button" @click="goToNext">
+            Next →
+          </button>
+        </div>
       </div>
     </section>
 
@@ -166,16 +167,38 @@ const closeFullscreen = () => {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
-  align-self: flex-end;
+  justify-self: end;
 }
 
-/* 30% left, 70% right */
+/* LEFT: back + card | RIGHT: carousel + buttons */
 .project-layout {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
-  gap: 3rem;
+  grid-template-rows: auto 1fr auto;
+  gap: 0 3rem;
   align-items: stretch;
   min-height: 100%;
+}
+
+.project-back {
+  grid-column: 1;
+  grid-row: 1;
+  padding-bottom: 1rem;
+}
+
+.project-info-wrapper {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.project-gallery-wrapper {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.project-buttons {
+  grid-column: 2;
+  grid-row: 3;
 }
 
 .project-info-wrapper {
@@ -296,7 +319,6 @@ const closeFullscreen = () => {
   object-fit: cover;
 }
 
-/* center slide: big and fully opaque */
 .project-image-card.is-center {
   transform: scale(1);
   opacity: 1;
@@ -304,7 +326,6 @@ const closeFullscreen = () => {
   z-index: 3;
 }
 
-/* immediate neighbors: slightly smaller & faded */
 .project-image-card.is-left,
 .project-image-card.is-right {
   transform: scale(0.8);
@@ -313,7 +334,6 @@ const closeFullscreen = () => {
   z-index: 2;
 }
 
-/* further slides: smaller & more faded */
 .project-image-card.is-far {
   transform: scale(0.76);
   opacity: 0.55;
@@ -321,12 +341,10 @@ const closeFullscreen = () => {
   z-index: 1;
 }
 
-/* "Next" button */
 .project-buttons {
   display: flex;
   gap: 1.5rem;
   justify-content: flex-end;
-  margin-top: 1rem;
 }
 
 .project-prev,
@@ -346,19 +364,55 @@ const closeFullscreen = () => {
 @media (max-width: 900px) {
   .project-layout {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-rows: auto auto auto auto;
   }
 
-  .project-info {
+  .project-back {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .project-gallery-wrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .project-info-wrapper {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .project-buttons {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-back {
     order: 1;
+    align-self: flex-start;
   }
 
   .project-gallery-wrapper {
     order: 2;
   }
-}
 
-@media (max-width: 768px) {
+  .project-info-wrapper {
+    order: 3;
+  }
+
+  .project-buttons {
+    order: 4;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
   .project-info {
     padding: 1rem 1.5rem;
   }
@@ -383,14 +437,6 @@ const closeFullscreen = () => {
 
   .project-divider {
     margin: 1rem 0;
-  }
-
-  .project-buttons {
-    justify-content: space-between;
-  }
-
-  .project-back {
-    align-self: flex-start;
   }
 }
 
