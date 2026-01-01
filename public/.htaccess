@@ -1,3 +1,9 @@
+# Environment Variables for SMTP
+SetEnv SMTP_USER "hello@jora-studio.com"
+SetEnv SMTP_PASS "Success1000*"
+SetEnv SMTP_HOST "mail.privateemail.com"
+SetEnv SMTP_PORT "465"
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 

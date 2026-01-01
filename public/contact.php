@@ -24,10 +24,10 @@ foreach ($required as $field) {
 $fromAddress = 'hello@jora-studio.com';
 $fromName    = 'Jora Studio Site';
 $toAddress   = 'hello@jora-studio.com';
-$smtpUser    = 'hello@jora-studio.com';
-$smtpPass    = 'Success1000*';
-$smtpHost    = 'mail.privateemail.com';
-$smtpPort    = 465;
+$smtpUser    = getenv('SMTP_USER');
+$smtpPass    = getenv('SMTP_PASS');
+$smtpHost    = getenv('SMTP_HOST');
+$smtpPort    = (int) getenv('SMTP_PORT');
 $smtpSecure  = 'ssl';
 
 $fullName = trim(($input['name'] ?? '') . ' ' . ($input['surname'] ?? ''));
