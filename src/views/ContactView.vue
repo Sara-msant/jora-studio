@@ -4,7 +4,7 @@
       <!-- LEFT: Image + Info Card -->
       <div class="contact-left">
         <div class="contact-image">
-          <img src="@/assets/contact-us/contact-us.png" alt="Contact Us" />
+          <img src="@/assets/contact-us/contact-us.jpeg" alt="Contact Us" />
         </div>
 
         <!-- Contact Info Card -->
