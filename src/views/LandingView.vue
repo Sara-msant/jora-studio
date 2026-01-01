@@ -119,6 +119,7 @@ const goToWelcome = () => {
   width: auto;
   transform: rotate(-90deg);
   filter: brightness(0) invert(1);
+  display: none;
 }
 
 /* Small-screen tweak */
@@ -147,6 +148,10 @@ const goToWelcome = () => {
 
   .landing-part {
     font-size: clamp(6rem, 50vw, 12rem);
+  }
+
+  .landing-arrow {
+    display: inline;
   }
 }
 </style>
