@@ -91,6 +91,7 @@ const breakpoints = {
 .portfolio-grid-wrapper {
   flex: 1;
   min-height: 0;
+  max-height: calc(100vh - var(--header-h) - 6rem);
   position: relative;
   overflow: hidden;
 }
