@@ -3,9 +3,11 @@
     <div class="jora-logo" @click="goHome">
       <div class="logo-main">JORA.</div>
       <div class="logo-sub alumni-sans">Studio</div>
+      <div class="logo-tagline">Architecture & Interiors</div>
     </div>
 
     <button class="jora-menu" type="button" aria-label="Open menu" @click="isMenuOpen = true">
+      <span></span>
       <span></span>
       <span></span>
       <span></span>
@@ -65,8 +67,15 @@ const goHome = () => {
 }
 
 .logo-sub {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 01rem;
+  line-height: 1rem;
+  font-family: 'Alumni Sans', sans-serif;
+}
+
+.logo-tagline {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-family: 'Alumni Sans', sans-serif;
 }
 
 .jora-menu {
@@ -79,6 +88,7 @@ const goHome = () => {
   justify-content: center;
   gap: 0.25rem;
   cursor: pointer;
+  align-self: center;
 }
 
 .jora-menu span {
@@ -98,7 +108,7 @@ const goHome = () => {
 
 @media (max-width: 768px) {
   .jora-header {
-    margin: 0.5rem 1.5rem;
+    margin: 1rem 1.5rem;
   }
 }
 </style>

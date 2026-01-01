@@ -13,7 +13,7 @@
         <div class="landing-studio">Studio</div>
         <div class="landing-tagline">
           Architecture & Interiors
-          <!-- <span class="landing-arrow">→</span> -->
+          <img src="@/assets/landing/long-down-arrow.svg" alt="arrow" class="landing-arrow" />
         </div>
       </div>
     </div>
@@ -115,7 +115,10 @@ const goToWelcome = () => {
 }
 
 .landing-arrow {
-  font-size: 2.5rem;
+  height: 2.5rem;
+  width: auto;
+  transform: rotate(-90deg);
+  filter: brightness(0) invert(1);
 }
 
 /* Small-screen tweak */

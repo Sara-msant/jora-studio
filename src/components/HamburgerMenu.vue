@@ -138,6 +138,38 @@ onMounted(() => {
   pointer-events: auto;
 }
 
+@media (max-width: 768px) {
+  .jora-menu-overlay {
+    padding: 0;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  .jora-menu {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .jora-menu-inner {
+    padding: 2rem 2rem 1.7rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .jora-menu-nav {
+    flex: 1;
+  }
+
+  .jora-menu-footer {
+    margin-top: auto;
+  }
+}
+
 .jora-menu-inner {
   padding: 1.9rem 2.6rem 1.7rem;
   color: #333;
