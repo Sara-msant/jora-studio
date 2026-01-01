@@ -2,13 +2,19 @@
   <div class="landing" @click="goToWelcome">
     <div class="landing-logo-block">
       <div class="landing-wordmark">
-        <span class="landing-jora">JORA</span>
-        <span class="landing-dot"></span>
+        <div class="landing-jora-wrapper">
+          <span class="landing-part">JO</span>
+          <span class="landing-part landing-ra">RA</span>
+          <span class="landing-dot"></span>
+        </div>
       </div>
 
       <div class="landing-subtitle">
         <div class="landing-studio">Studio</div>
-        <div class="landing-tagline">Architecture & Interiors</div>
+        <div class="landing-tagline">
+          Architecture & Interiors
+          <!-- <span class="landing-arrow">→</span> -->
+        </div>
       </div>
     </div>
   </div>
@@ -49,23 +55,35 @@ const goToWelcome = () => {
   gap: 1.5rem;
 }
 
+.landing-jora-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+}
+
 /* big "JORA" text */
-.landing-jora {
+.landing-part {
   font-family: 'Bauhaus 93', sans-serif;
   font-weight: 400;
-  font-size: clamp(4rem, 16vw, 13rem);
+  font-size: clamp(5rem, 20vw, 15rem);
   /* responsive, big on desktop */
   line-height: 0.7;
   color: #f4f5f7;
 }
 
+.landing-ra {
+  margin-left: -0.075em;
+}
+
 /* blue dot */
 .landing-dot {
-  width: clamp(1.5rem, 4vw, 3rem);
-  height: clamp(1.5rem, 4vw, 3rem);
+  width: clamp(2rem, 8vw, 6rem);
+  height: clamp(2rem, 8vw, 6rem);
   border-radius: 50%;
   background-color: #64b5ff;
   /* light blue */
+  flex-shrink: 0;
+  margin-left: 0.3em;
 }
 
 /* Subtitle text */
@@ -87,21 +105,45 @@ const goToWelcome = () => {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #c3c6d0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.landing-tagline i {
+  font-size: 1.5rem;
+}
+
+.landing-arrow {
+  font-size: 2.5rem;
 }
 
 /* Small-screen tweak */
 @media (max-width: 768px) {
   .landing {
     justify-content: center;
+    align-items: center;
     padding: 2rem;
   }
 
   .landing-logo-block {
-    text-align: center;
+    text-align: left;
   }
 
   .landing-wordmark {
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .landing-jora-wrapper {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0;
+  }
+
+  .landing-part {
+    font-size: clamp(6rem, 50vw, 12rem);
   }
 }
 </style>
