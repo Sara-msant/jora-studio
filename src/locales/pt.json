@@ -14,35 +14,36 @@
         "year": "Ano:"
     },
         "contact": {
-        "title": "Contacto",
-        "description": "Adoramos ouvir você. Se você está planejando um novo projeto ou explorando ideias, nossa equipe o guiará em cada etapa — desde o conceito até a conclusão.",
-        "infoTitle": "Informações",
-        "phone": "Telefone",
-        "email": "E-mail",
-        "name": "Nome",
-        "surname": "Sobrenome",
-        "projectLocation": "Localização do Projeto",
-        "projectType": "Tipo de Projeto",
-        "briefDescription": "Breve Descrição do Projeto",
-        "selectType": "Selecione um tipo",
-        "types": {
-            "residential": "Residencial",
-            "partnerships": "Parcerias",
-            "commercial": "Hotéis",
-            "other": "Outro"
-        },
-        "disclaimer": "Ao enviar seus dados, você está nos dando permissão para usar as informações para ajudá-lo e entrar em contato com você. Não se preocupe, podemos garantir que a totalidade dos seus dados está segura.",
-        "submit": "Enviar",
-        "sending": "Enviando...",
-        "successMessage": "Obrigado! Recebemos sua mensagem.",
-        "errorMessage": "Desculpe, algo deu errado. Por favor, tente novamente mais tarde.",
-        "validationError": "Por favor, preencha nome, e-mail, descrição do projeto e selecione um tipo de projeto.",
-        "errors": {
-            "nameRequired": "Nome é obrigatório",
-            "emailRequired": "E-mail é obrigatório",
-            "locationRequired": "Localização do projeto é obrigatória",
-            "projectTypeRequired": "Por favor, selecione um tipo de projeto",
-            "descriptionRequired": "Descrição do projeto é obrigatória"
-        }
+    "title": "Contacto",
+    "description": "Valorizamos conversas com visão e ambição. Quer esteja a estruturar um novo investimento ou a desenvolver um projeto singular, a nossa equipa acompanha todo o percurso — da estratégia inicial à execução final.",
+    "infoTitle": "Contactos",
+    "phone": "Telefone",
+    "email": "Email",
+    "name": "Nome",
+    "surname": "Apelido",
+    "projectLocation": "Localização do Projeto",
+    "projectType": "Tipo de Projeto",
+    "briefDescription": "Descrição resumida do projeto",
+    "selectType": "Selecione o tipo de projeto",
+    "types": {
+        "residential": "Residencial",
+        "partnerships": "Parcerias",
+        "commercial": "Comercial",
+        "other": "Outro"
+    },
+    "disclaimer": "Ao submeter os seus dados, autoriza a sua utilização para efeitos de contacto e acompanhamento do seu pedido. Garantimos total confidencialidade e o tratamento seguro de toda a informação.",
+    "submit": "Enviar pedido",
+    "sending": "A enviar...",
+    "successMessage": "Obrigado. A sua mensagem foi recebida e será analisada pela nossa equipa.",
+    "errorMessage": "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.",
+    "validationError": "Por favor, preencha o nome, email, descrição do projeto e selecione o tipo de projeto.",
+    "errors": {
+        "nameRequired": "O nome é obrigatório",
+        "emailRequired": "O email é obrigatório",
+        "locationRequired": "A localização do projeto é obrigatória",
+        "projectTypeRequired": "Selecione o tipo de projeto",
+        "descriptionRequired": "A descrição do projeto é obrigatória"
     }
+}
+
 }

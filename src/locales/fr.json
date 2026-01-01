@@ -28,7 +28,7 @@
         "types": {
             "residential": "Résidentiel",
             "partnerships": "Partenariats",
-            "commercial": "Hôtels",
+            "commercial": "Commercial",
             "other": "Autre"
         },
         "disclaimer": "En envoyant vos données, vous nous donnez la permission d'utiliser les informations pour vous aider et vous contacter. Ne vous inquiétez pas, nous pouvons assurer que la totalité de vos données est sécurisée.",
