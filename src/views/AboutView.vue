@@ -63,16 +63,23 @@
 
       <!-- RIGHT: profiles -->
       <aside class="profiles">
-        <article class="profile">
-          <div class="profile-photo">
-            <img :src="images.rachel" alt="Rachel" draggable="false" />
-          </div>
-          <div class="profile-meta">
-            <div class="profile-name">Rachel</div>
-            <div class="profile-role">CEO &amp; Interior Architect</div>
-            <div class="profile-loc">Faro, Algarve</div>
-          </div>
-        </article>
+        <a
+          href="https://www.linkedin.com/in/rachelcambier"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="profile-link"
+        >
+          <article class="profile">
+            <div class="profile-photo">
+              <img :src="images.rachel" alt="Rachel" draggable="false" />
+            </div>
+            <div class="profile-meta">
+              <div class="profile-name">Rachel</div>
+              <div class="profile-role">CEO &amp; Interior Architect</div>
+              <div class="profile-loc">Faro, Algarve</div>
+            </div>
+          </article>
+        </a>
 
         <article class="profile">
           <div class="profile-photo">
@@ -239,6 +246,12 @@ const images = {
   align-items: center;
 }
 
+.profile-link {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+}
+
 .profile-photo {
   width: 160px;
   height: 210px;
@@ -288,7 +301,7 @@ const images = {
 
   .profiles {
     padding-top: 0;
-    justify-items: start;
+    justify-items: center;
   }
 }
 
@@ -306,8 +319,7 @@ const images = {
   .note-inner {
     max-width: 100%;
   }
-  .collage,
-  .profile-photo img {
+  .collage {
     display: none;
   }
 
@@ -332,7 +344,9 @@ const images = {
   }
 
   .profile {
-    grid-template-columns: 140px 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 
   .profile-photo {

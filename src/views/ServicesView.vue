@@ -157,7 +157,7 @@ const toggle = (i: number) => {
   background: transparent;
   border: none;
   border-bottom: 2px solid #cfcfd1;
-  padding: 0.6rem 0.75rem;
+  padding: 0.6rem 0;
   cursor: pointer;
   text-align: left;
 }
@@ -181,12 +181,12 @@ const toggle = (i: number) => {
   transition:
     max-height 0.32s ease,
     padding 0.32s ease;
-  padding: 0 0.75rem;
+  padding: 0;
 }
 
 .accordion-item.open .accordion-body {
   max-height: 1000px;
-  padding-top: 0.75rem;
+  padding: 0.75rem 0 0 0;
 }
 
 .panel-content {
@@ -232,6 +232,24 @@ const toggle = (i: number) => {
 
   .card-text {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion {
+    gap: 0;
+  }
+
+  .steps {
+    flex: 1;
+  }
+
+  .step-title {
+    font-size: 1rem;
+  }
+
+  .highlight {
+    display: none;
   }
 }
 </style>
