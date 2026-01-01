@@ -1,152 +1,142 @@
 <template>
   <PageWrapper>
-    <main class="contact-main">
-      <section class="contact-content">
-        <!-- LEFT: Image + Info Card -->
-        <div class="contact-left">
-          <div class="contact-image">
-            <img src="@/assets/contact-us/contact-us.png" alt="Contact Us" />
-          </div>
-
-          <!-- Contact Info Card -->
-          <aside class="contact-info">
-            <h2 class="info-title">{{ t('contact.infoTitle') }}</h2>
-            <div class="info-block">
-              <p class="info-label">{{ t('contact.phone') }}</p>
-              <p class="info-value">+351 919 998 681<br />+351 914 371 356</p>
-            </div>
-            <div class="info-block">
-              <p class="info-label">{{ t('contact.email') }}</p>
-              <p class="info-value">hello@jorastudio.com<br />Algarve, Portugal</p>
-            </div>
-          </aside>
+    <section class="contact-content">
+      <!-- LEFT: Image + Info Card -->
+      <div class="contact-left">
+        <div class="contact-image">
+          <img src="@/assets/contact-us/contact-us.png" alt="Contact Us" />
         </div>
 
-        <!-- RIGHT: Header + Form -->
-        <div class="contact-right">
-          <!-- Header Section -->
-          <div class="contact-header">
-            <h1 class="contact-title">{{ t('contact.title') }}</h1>
-            <p class="contact-description">
-              {{ t('contact.description') }}
-            </p>
+        <!-- Contact Info Card -->
+        <aside class="contact-info">
+          <h2 class="info-title">{{ t('contact.infoTitle') }}</h2>
+          <div class="info-block">
+            <p class="info-label">{{ t('contact.phone') }}</p>
+            <p class="info-value">+351 919 998 681<br />+351 914 371 356</p>
           </div>
-          <form class="contact-form" @submit.prevent="handleSubmit">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name" class="form-label">{{ t('contact.name') }}</label>
-                <input
-                  id="name"
-                  v-model="form.name"
-                  type="text"
-                  class="form-input"
-                  :class="{ 'input-error': fieldErrors.name }"
-                  placeholder=""
-                />
-                <p v-if="fieldErrors.name" class="field-error">{{ fieldErrors.name }}</p>
-              </div>
-              <div class="form-group">
-                <label for="surname" class="form-label">{{ t('contact.surname') }}</label>
-                <input
-                  id="surname"
-                  v-model="form.surname"
-                  type="text"
-                  class="form-input"
-                  placeholder=""
-                />
-              </div>
-            </div>
+          <div class="info-block">
+            <p class="info-label">{{ t('contact.email') }}</p>
+            <p class="info-value">hello@jorastudio.com<br />Algarve, Portugal</p>
+          </div>
+        </aside>
+      </div>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email" class="form-label">{{ t('contact.email') }}</label>
-                <input
-                  id="email"
-                  v-model="form.email"
-                  type="email"
-                  class="form-input"
-                  :class="{ 'input-error': fieldErrors.email }"
-                  placeholder=""
-                />
-                <p v-if="fieldErrors.email" class="field-error">{{ fieldErrors.email }}</p>
-              </div>
-              <div class="form-group">
-                <label for="phone" class="form-label">{{ t('contact.phone') }}</label>
-                <input
-                  id="phone"
-                  v-model="form.phone"
-                  type="tel"
-                  class="form-input"
-                  placeholder=""
-                />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="location" class="form-label">{{ t('contact.projectLocation') }}</label>
-                <input
-                  id="location"
-                  v-model="form.location"
-                  type="text"
-                  class="form-input"
-                  :class="{ 'input-error': fieldErrors.location }"
-                  placeholder=""
-                />
-                <p v-if="fieldErrors.location" class="field-error">{{ fieldErrors.location }}</p>
-              </div>
-              <div class="form-group">
-                <label for="type" class="form-label">{{ t('contact.projectType') }}</label>
-                <select
-                  id="type"
-                  v-model="form.type"
-                  class="form-input"
-                  :class="{ 'input-error': fieldErrors.type }"
-                >
-                  <option value="" disabled>{{ t('contact.selectType') }}</option>
-                  <option value="residential">{{ t('contact.types.residential') }}</option>
-                  <option value="partnerships">{{ t('contact.types.partnerships') }}</option>
-                  <option value="commercial">{{ t('contact.types.commercial') }}</option>
-                  <option value="other">{{ t('contact.types.other') }}</option>
-                </select>
-                <p v-if="fieldErrors.type" class="field-error">{{ fieldErrors.type }}</p>
-              </div>
-            </div>
-
-            <div class="form-group full-width">
-              <label for="description" class="form-label">{{
-                t('contact.briefDescription')
-              }}</label>
-              <textarea
-                id="description"
-                v-model="form.description"
-                class="form-textarea"
-                :class="{ 'input-error': fieldErrors.description }"
+      <!-- RIGHT: Header + Form -->
+      <div class="contact-right">
+        <!-- Header Section -->
+        <div class="contact-header">
+          <h1 class="contact-title">{{ t('contact.title') }}</h1>
+          <p class="contact-description">
+            {{ t('contact.description') }}
+          </p>
+        </div>
+        <form class="contact-form" @submit.prevent="handleSubmit">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">{{ t('contact.name') }}</label>
+              <input
+                id="name"
+                v-model="form.name"
+                type="text"
+                class="form-input"
+                :class="{ 'input-error': fieldErrors.name }"
                 placeholder=""
-                rows="5"
-              ></textarea>
-              <p v-if="fieldErrors.description" class="field-error">
-                {{ fieldErrors.description }}
-              </p>
+              />
+              <p v-if="fieldErrors.name" class="field-error">{{ fieldErrors.name }}</p>
             </div>
+            <div class="form-group">
+              <label for="surname" class="form-label">{{ t('contact.surname') }}</label>
+              <input
+                id="surname"
+                v-model="form.surname"
+                type="text"
+                class="form-input"
+                placeholder=""
+              />
+            </div>
+          </div>
 
-            <p class="form-disclaimer">
-              {{ t('contact.disclaimer') }}
-            </p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email" class="form-label">{{ t('contact.email') }}</label>
+              <input
+                id="email"
+                v-model="form.email"
+                type="email"
+                class="form-input"
+                :class="{ 'input-error': fieldErrors.email }"
+                placeholder=""
+              />
+              <p v-if="fieldErrors.email" class="field-error">{{ fieldErrors.email }}</p>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">{{ t('contact.phone') }}</label>
+              <input id="phone" v-model="form.phone" type="tel" class="form-input" placeholder="" />
+            </div>
+          </div>
 
-            <button type="submit" class="submit-btn" :disabled="loading">
-              {{ loading ? t('contact.sending') : t('contact.submit') }}
-            </button>
-            <p v-if="status === 'ok'" class="form-status success">
-              {{ t('contact.successMessage') }}
+          <div class="form-row">
+            <div class="form-group">
+              <label for="location" class="form-label">{{ t('contact.projectLocation') }}</label>
+              <input
+                id="location"
+                v-model="form.location"
+                type="text"
+                class="form-input"
+                :class="{ 'input-error': fieldErrors.location }"
+                placeholder=""
+              />
+              <p v-if="fieldErrors.location" class="field-error">{{ fieldErrors.location }}</p>
+            </div>
+            <div class="form-group">
+              <label for="type" class="form-label">{{ t('contact.projectType') }}</label>
+              <select
+                id="type"
+                v-model="form.type"
+                class="form-input"
+                :class="{ 'input-error': fieldErrors.type }"
+              >
+                <option value="" disabled>{{ t('contact.selectType') }}</option>
+                <option value="residential">{{ t('contact.types.residential') }}</option>
+                <option value="partnerships">{{ t('contact.types.partnerships') }}</option>
+                <option value="commercial">{{ t('contact.types.commercial') }}</option>
+                <option value="other">{{ t('contact.types.other') }}</option>
+              </select>
+              <p v-if="fieldErrors.type" class="field-error">{{ fieldErrors.type }}</p>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="description" class="form-label">{{ t('contact.briefDescription') }}</label>
+            <textarea
+              id="description"
+              v-model="form.description"
+              class="form-textarea"
+              :class="{ 'input-error': fieldErrors.description }"
+              placeholder=""
+              rows="5"
+            ></textarea>
+            <p v-if="fieldErrors.description" class="field-error">
+              {{ fieldErrors.description }}
             </p>
-            <p v-if="status === 'error'" class="form-status error">
-              {{ t('contact.errorMessage') }}
-            </p>
-          </form>
-        </div>
-      </section>
-    </main>
+          </div>
+
+          <p class="form-disclaimer">
+            {{ t('contact.disclaimer') }}
+          </p>
+
+          <button type="submit" class="submit-btn" :disabled="loading">
+            {{ loading ? t('contact.sending') : t('contact.submit') }}
+          </button>
+          <p v-if="status === 'ok'" class="form-status success">
+            {{ t('contact.successMessage') }}
+          </p>
+          <p v-if="status === 'error'" class="form-status error">
+            {{ t('contact.errorMessage') }}
+          </p>
+        </form>
+      </div>
+    </section>
   </PageWrapper>
 </template>
 
@@ -243,12 +233,6 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-.contact-main {
-  flex: 1;
-  padding: 4rem 3rem;
-  min-height: calc(100vh - 120px);
-}
-
 .contact-content {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
@@ -270,6 +254,9 @@ const handleSubmit = async () => {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   height: fit-content;
   max-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-image img {
@@ -283,7 +270,7 @@ const handleSubmit = async () => {
 .contact-right {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 /* Top Row: Header + Info Card side by side */
@@ -360,7 +347,7 @@ const handleSubmit = async () => {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
 }
 
 .form-row {
@@ -424,7 +411,7 @@ const handleSubmit = async () => {
 .form-disclaimer {
   font-size: 0.75rem;
   color: #999;
-  line-height: 1.5;
+  line-height: 1;
   font-family: 'Geist Mono', monospace;
   margin: 1rem 0;
 }
@@ -468,13 +455,13 @@ const handleSubmit = async () => {
 }
 
 @media (max-width: 768px) {
-  .contact-main {
-    padding: 2rem 1.5rem;
-  }
-
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .contact-image {
+    display: none;
   }
 
   .contact-title {

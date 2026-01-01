@@ -1,39 +1,37 @@
 <template>
   <PageWrapper>
-    <main class="services-main">
-      <section class="steps">
-        <div class="accordion">
-          <div
-            class="accordion-item"
-            v-for="(step, i) in steps"
-            :key="i"
-            :class="{ open: openIndices.includes(i) }"
+    <section class="steps">
+      <div class="accordion">
+        <div
+          class="accordion-item"
+          v-for="(step, i) in steps"
+          :key="i"
+          :class="{ open: openIndices.includes(i) }"
+        >
+          <button
+            class="accordion-header"
+            type="button"
+            :aria-expanded="openIndices.includes(i)"
+            @click="toggle(i)"
           >
-            <button
-              class="accordion-header"
-              type="button"
-              :aria-expanded="openIndices.includes(i)"
-              @click="toggle(i)"
-            >
-              <div class="step-title">{{ step.title }}</div>
-              <span class="chev">▼</span>
-            </button>
+            <div class="step-title">{{ step.title }}</div>
+            <span class="chev">▼</span>
+          </button>
 
-            <div class="accordion-body">
-              <div class="panel-content">
-                {{ step.content }}
-              </div>
+          <div class="accordion-body">
+            <div class="panel-content">
+              {{ step.content }}
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <aside class="highlight">
-        <div class="card">
-          <div class="card-text">Trust<br />The<br />Process.</div>
-        </div>
-      </aside>
-    </main>
+    <aside class="highlight">
+      <div class="card">
+        <div class="card-text">Trust<br />The<br />Process.</div>
+      </div>
+    </aside>
   </PageWrapper>
 </template>
 
@@ -87,16 +85,6 @@ const toggle = (i: number) => {
   display: flex;
   flex-direction: column;
   background: var(--page-bg, #f5f5f5);
-}
-
-.services-main {
-  height: calc(100vh - var(--header-h) - 8rem);
-  box-sizing: border-box;
-  min-height: 0;
-  display: flex;
-  gap: 4rem;
-  padding: 4rem 6rem;
-  align-items: flex-start;
 }
 
 .steps {
@@ -217,6 +205,7 @@ const toggle = (i: number) => {
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
 }
 
 .card-text {
@@ -227,23 +216,18 @@ const toggle = (i: number) => {
 }
 
 @media (max-width: 980px) {
-  .services-main {
-    flex-direction: column;
-    padding: 2rem;
-    height: auto;
-    min-height: auto;
-  }
-
   .highlight {
     align-self: stretch;
     display: flex;
     width: 100%;
     justify-content: center;
+    padding: 0 1rem;
   }
 
   .card {
-    width: 220px;
     height: 220px;
+    padding: 20px 30px;
+    flex-shrink: 0;
   }
 
   .card-text {

@@ -1,93 +1,91 @@
 <template>
   <PageWrapper>
-    <main class="about-main">
-      <div class="about-grid">
-        <!-- LEFT: collage -->
-        <section class="collage">
-          <div class="collage-stage">
-            <div class="collage-frame collage-frame--large">
-              <img :src="images.groupA" alt="Studio portrait" draggable="false" />
-            </div>
-
-            <div class="collage-frame collage-frame--mid">
-              <img :src="images.groupB" alt="Studio portrait" draggable="false" />
-            </div>
-
-            <div class="collage-frame collage-frame--small">
-              <img :src="images.groupC" alt="Studio portrait" draggable="false" />
-            </div>
+    <div class="about-grid">
+      <!-- LEFT: collage -->
+      <section class="collage">
+        <div class="collage-stage">
+          <div class="collage-frame collage-frame--large">
+            <img :src="images.groupA" alt="Studio portrait" draggable="false" />
           </div>
-        </section>
 
-        <!-- CENTER: note -->
-        <section class="note">
-          <div class="note-inner">
-            <h1 class="note-title">Jora Studio.</h1>
-            <div class="note-rule" />
-
-            <div class="note-body">
-              <p>
-                JORA Studio is led by Rachel Cambier and Joaquim Pinheiro Torres, an international
-                duo of designers/architects with Belgian and Portuguese roots.
-              </p>
-
-              <p>
-                Together, they bring over 25 years of combined experience in architecture, interior
-                design, and bespoke furniture creation.
-              </p>
-
-              <p>
-                Their new collaboration merges two distinct design cultures — the refined precision
-                of Northern Europe and the natural warmth of the South — resulting in a distinctive
-                aesthetic that is both timeless and contemporary.
-              </p>
-
-              <p>
-                Grounded in architecture and guided by a deep sensitivity to materials, light, and
-                proportion, JORA Studio crafts environments that feel effortless yet meticulously
-                composed.
-              </p>
-
-              <p>
-                Their shared philosophy is rooted in quiet luxury: an approach that values
-                restraint, authenticity, and craftsmanship over excess.
-              </p>
-
-              <p>
-                Operating from Algarve, Portugal and working on international projects, JORA Studio
-                delivers comprehensive design services that integrate architecture, interiors, and
-                custom design into one seamless narrative.
-              </p>
-            </div>
+          <div class="collage-frame collage-frame--mid">
+            <img :src="images.groupB" alt="Studio portrait" draggable="false" />
           </div>
-        </section>
 
-        <!-- RIGHT: profiles -->
-        <aside class="profiles">
-          <article class="profile">
-            <div class="profile-photo">
-              <img :src="images.rachel" alt="Rachel" draggable="false" />
-            </div>
-            <div class="profile-meta">
-              <div class="profile-name">Rachel</div>
-              <div class="profile-role">CEO &amp; Interior Architect</div>
-              <div class="profile-loc">Faro, Algarve</div>
-            </div>
-          </article>
+          <div class="collage-frame collage-frame--small">
+            <img :src="images.groupC" alt="Studio portrait" draggable="false" />
+          </div>
+        </div>
+      </section>
 
-          <article class="profile">
-            <div class="profile-photo">
-              <img :src="images.joaquim" alt="Joaquim" draggable="false" />
-            </div>
-            <div class="profile-meta">
-              <div class="profile-name">Joaquim</div>
-              <div class="profile-role">CEO &amp; Architect</div>
-              <div class="profile-loc">Faro, Algarve</div>
-            </div>
-          </article>
-        </aside>
-      </div>
-    </main>
+      <!-- CENTER: note -->
+      <section class="note">
+        <div class="note-inner">
+          <h1 class="note-title">Jora Studio.</h1>
+          <div class="note-rule" />
+
+          <div class="note-body">
+            <p>
+              JORA Studio is led by Rachel Cambier and Joaquim Pinheiro Torres, an international duo
+              of designers/architects with Belgian and Portuguese roots.
+            </p>
+
+            <p>
+              Together, they bring over 25 years of combined experience in architecture, interior
+              design, and bespoke furniture creation.
+            </p>
+
+            <p>
+              Their new collaboration merges two distinct design cultures — the refined precision of
+              Northern Europe and the natural warmth of the South — resulting in a distinctive
+              aesthetic that is both timeless and contemporary.
+            </p>
+
+            <p>
+              Grounded in architecture and guided by a deep sensitivity to materials, light, and
+              proportion, JORA Studio crafts environments that feel effortless yet meticulously
+              composed.
+            </p>
+
+            <p>
+              Their shared philosophy is rooted in quiet luxury: an approach that values restraint,
+              authenticity, and craftsmanship over excess.
+            </p>
+
+            <p>
+              Operating from Algarve, Portugal and working on international projects, JORA Studio
+              delivers comprehensive design services that integrate architecture, interiors, and
+              custom design into one seamless narrative.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: profiles -->
+      <aside class="profiles">
+        <article class="profile">
+          <div class="profile-photo">
+            <img :src="images.rachel" alt="Rachel" draggable="false" />
+          </div>
+          <div class="profile-meta">
+            <div class="profile-name">Rachel</div>
+            <div class="profile-role">CEO &amp; Interior Architect</div>
+            <div class="profile-loc">Faro, Algarve</div>
+          </div>
+        </article>
+
+        <article class="profile">
+          <div class="profile-photo">
+            <img :src="images.joaquim" alt="Joaquim" draggable="false" />
+          </div>
+          <div class="profile-meta">
+            <div class="profile-name">Joaquim</div>
+            <div class="profile-role">CEO &amp; Architect</div>
+            <div class="profile-loc">Faro, Algarve</div>
+          </div>
+        </article>
+      </aside>
+    </div>
   </PageWrapper>
 </template>
 
@@ -110,12 +108,15 @@ const images = {
   padding: 3.25rem 2rem 2rem;
   box-sizing: border-box;
   display: flex;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .about-grid {
   flex: 1;
   height: 100%;
   min-height: 0;
+  width: 100%;
 
   display: grid;
   grid-template-columns: minmax(560px, 1.05fr) 1.35fr 0.65fr;
@@ -194,6 +195,7 @@ const images = {
   border-radius: 18px;
   padding: 2rem 2rem 1.8rem;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
 }
 
 .note-title {
@@ -275,11 +277,13 @@ const images = {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2.25rem;
+    width: 100%;
   }
 
   .collage {
     min-height: 520px;
-    padding-left: 32px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .profiles {
@@ -290,7 +294,21 @@ const images = {
 
 @media (max-width: 650px) {
   .about-main {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .note-inner {
+    max-width: 100%;
+  }
+  .collage,
+  .profile-photo img {
+    display: none;
   }
 
   .collage-frame--large {

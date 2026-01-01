@@ -1,8 +1,6 @@
 <template>
-  <div class="jora portfolio-page">
-    <Header />
-
-    <section v-if="project" class="project-main">
+  <PageWrapper>
+    <section v-if="project">
       <div class="project-layout">
         <div class="project-info-wrapper">
           <button class="project-back" type="button" @click="goToPortfolio">← Back</button>
@@ -99,17 +97,17 @@
     <section v-else class="project-not-found">
       <p>Project not found.</p>
     </section>
-  </div>
+  </PageWrapper>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import Header from '@/components/Header.vue'
 import 'vue3-carousel/carousel.css'
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
 import { usePortfolioProjects } from '@/composables/usePortfolioProjects'
+import PageWrapper from '@/components/PageWrapper.vue'
 
 const { t } = useI18n()
 
@@ -161,13 +159,6 @@ const closeFullscreen = () => {
 </script>
 
 <style scoped>
-/* main area under header */
-.project-main {
-  padding: 2rem 3rem;
-  min-height: calc(100vh - 120px); /* adjust if header height differs */
-  box-sizing: border-box;
-}
-
 .project-back {
   border: none;
   background: transparent;
@@ -195,7 +186,7 @@ const closeFullscreen = () => {
 
 /* LEFT: yellow info card */
 .project-info {
-  background: #fff476; /* or #ffe65b if you prefer */
+  background: #fff476;
   border-radius: 24px;
   padding: 2rem 2.5rem;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
@@ -203,6 +194,7 @@ const closeFullscreen = () => {
   flex-direction: column;
   gap: 1.75rem;
   position: relative;
+  box-sizing: border-box;
 }
 
 .project-title {
@@ -352,10 +344,6 @@ const closeFullscreen = () => {
 }
 
 @media (max-width: 900px) {
-  .project-main {
-    padding: 1.5rem;
-  }
-
   .project-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -367,6 +355,42 @@ const closeFullscreen = () => {
 
   .project-gallery-wrapper {
     order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-info {
+    padding: 1rem 1.5rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .project-type {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .project-header-row {
+    flex-wrap: wrap;
+  }
+
+  .project-meta {
+    grid-template-columns: auto 1fr;
+  }
+
+  .project-divider {
+    margin: 1rem 0;
+  }
+
+  .project-buttons {
+    justify-content: space-between;
+  }
+
+  .project-back {
+    align-self: flex-start;
   }
 }
 

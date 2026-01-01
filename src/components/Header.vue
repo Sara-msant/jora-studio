@@ -48,6 +48,7 @@ const goHome = () => {
   z-index: 9999;
   color: #323542;
   height: var(--header-h);
+  margin: 1.5rem 2.5rem;
 }
 
 .jora-logo {
@@ -93,5 +94,11 @@ const goHome = () => {
 
 .jora-header.jora-white .jora-menu span {
   background-color: white !important;
+}
+
+@media (max-width: 768px) {
+  .jora-header {
+    margin: 0.5rem 1.5rem;
+  }
 }
 </style>

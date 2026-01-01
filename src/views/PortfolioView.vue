@@ -1,48 +1,46 @@
 <template>
   <PageWrapper>
-    <section class="portfolio-main">
-      <div class="portfolio-grid-wrapper">
-        <Carousel
-          class="portfolio-carousel"
-          :wrap-around="true"
-          :mouse-drag="true"
-          :touch-drag="true"
-          :breakpoints="breakpoints"
-          :transition="450"
-          snap-align="start"
-        >
-          <Slide v-for="col in projectColumns" :key="col.key">
-            <div class="portfolio-col">
-              <article v-if="col.top" class="portfolio-card" @click="goToProject(col.top)">
-                <img :src="col.top.cover" :alt="col.top.title" draggable="false" />
+    <div class="portfolio-grid-wrapper">
+      <Carousel
+        class="portfolio-carousel"
+        :wrap-around="true"
+        :mouse-drag="true"
+        :touch-drag="true"
+        :breakpoints="breakpoints"
+        :transition="450"
+        snap-align="start"
+      >
+        <Slide v-for="col in projectColumns" :key="col.key">
+          <div class="portfolio-col">
+            <article v-if="col.top" class="portfolio-card" @click="goToProject(col.top)">
+              <img :src="col.top.cover" :alt="col.top.title" draggable="false" />
 
-                <div class="portfolio-card-overlay">
-                  <div class="portfolio-card-overlay-content">
-                    <div class="portfolio-card-title">{{ col.top.title }}</div>
-                    <div class="portfolio-card-subtitle">{{ col.top.type }}</div>
-                  </div>
+              <div class="portfolio-card-overlay">
+                <div class="portfolio-card-overlay-content">
+                  <div class="portfolio-card-title">{{ col.top.title }}</div>
+                  <div class="portfolio-card-subtitle">{{ col.top.type }}</div>
                 </div>
-              </article>
+              </div>
+            </article>
 
-              <article v-if="col.bottom" class="portfolio-card" @click="goToProject(col.bottom)">
-                <img :src="col.bottom.cover" :alt="col.bottom.title" draggable="false" />
+            <article v-if="col.bottom" class="portfolio-card" @click="goToProject(col.bottom)">
+              <img :src="col.bottom.cover" :alt="col.bottom.title" draggable="false" />
 
-                <div class="portfolio-card-overlay">
-                  <div class="portfolio-card-overlay-content">
-                    <div class="portfolio-card-title">{{ col.bottom.title }}</div>
-                    <div class="portfolio-card-subtitle">{{ col.bottom.type }}</div>
-                  </div>
+              <div class="portfolio-card-overlay">
+                <div class="portfolio-card-overlay-content">
+                  <div class="portfolio-card-title">{{ col.bottom.title }}</div>
+                  <div class="portfolio-card-subtitle">{{ col.bottom.type }}</div>
                 </div>
-              </article>
-            </div>
-          </Slide>
+              </div>
+            </article>
+          </div>
+        </Slide>
 
-          <template #addons>
-            <Navigation />
-          </template>
-        </Carousel>
-      </div>
-    </section>
+        <template #addons>
+          <Navigation />
+        </template>
+      </Carousel>
+    </div>
   </PageWrapper>
 </template>
 
@@ -90,14 +88,6 @@ const breakpoints = {
 <style scoped>
 /* Fill viewport minus fixed header.
    box-sizing keeps padding inside the height. */
-.portfolio-main {
-  height: calc(100vh - var(--header-h) - 4rem);
-  box-sizing: border-box;
-  min-height: 0;
-  display: flex;
-  padding: 2rem 3rem 0;
-}
-
 .portfolio-grid-wrapper {
   flex: 1;
   min-height: 0;
@@ -207,33 +197,7 @@ const breakpoints = {
   border: none;
 }
 
-@media (max-width: 900px) {
-  .portfolio-main {
-    padding: 1.5rem;
-  }
-}
-
 @media (max-width: 600px) {
-  .portfolio-carousel :deep(.carousel__viewport) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      black 28px,
-      black calc(100% - 28px),
-      transparent 100%
-    );
-    mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      black 28px,
-      black calc(100% - 28px),
-      transparent 100%
-    );
-  }
-
   .portfolio-carousel :deep(.carousel__slide) {
     padding: 0 0.5rem;
   }
