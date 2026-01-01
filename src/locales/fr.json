@@ -12,5 +12,37 @@
         "status": "Statut:",
         "area": "Surface:",
         "year": "Année:"
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Nous aimerions beaucoup vous entendre. Que vous planifiez un nouveau projet ou explorez des idées, notre équipe vous guidera à chaque étape — du concept à la réalisation.",
+        "infoTitle": "Informations",
+        "phone": "Téléphone",
+        "email": "E-mail",
+        "name": "Nom",
+        "surname": "Prénom",
+        "projectLocation": "Localisation du Projet",
+        "projectType": "Type de Projet",
+        "briefDescription": "Brève Description du Projet",
+        "selectType": "Sélectionnez un type",
+        "types": {
+            "residential": "Résidentiel",
+            "partnerships": "Partenariats",
+            "commercial": "Hôtels",
+            "other": "Autre"
+        },
+        "disclaimer": "En envoyant vos données, vous nous donnez la permission d'utiliser les informations pour vous aider et vous contacter. Ne vous inquiétez pas, nous pouvons assurer que la totalité de vos données est sécurisée.",
+        "submit": "Soumettre",
+        "sending": "Envoi en cours...",
+        "successMessage": "Merci ! Nous avons reçu votre message.",
+        "errorMessage": "Désolé, quelque chose s'est mal passé. Veuillez réessayer plus tard.",
+        "validationError": "Veuillez remplir le nom, l'e-mail, la description du projet et sélectionner un type de projet.",
+        "errors": {
+            "nameRequired": "Le nom est obligatoire",
+            "emailRequired": "L'e-mail est obligatoire",
+            "locationRequired": "La localisation du projet est obligatoire",
+            "projectTypeRequired": "Veuillez sélectionner un type de projet",
+            "descriptionRequired": "La description du projet est obligatoire"
+        }
     }
 }

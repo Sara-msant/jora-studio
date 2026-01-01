@@ -141,8 +141,12 @@ const goToPortfolio = () => {
 
 const slideClass = (index: number, current: number) => {
   if (index === current) return 'is-center'
-  if (index === current - 1) return 'is-left'
-  if (index === current + 1) return 'is-right'
+
+  const total = project.value?.gallery.length ?? 0
+  const diff = (index - current + total) % total
+
+  if (diff === 1) return 'is-right'
+  if (diff === total - 1) return 'is-left'
   return 'is-far'
 }
 
@@ -208,7 +212,7 @@ const closeFullscreen = () => {
 }
 
 .project-type {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   font-family: 'Alumni Sans', sans-serif;
@@ -313,7 +317,7 @@ const closeFullscreen = () => {
 .project-image-card.is-right {
   transform: scale(0.8);
   opacity: 0.9;
-  filter: grayscale(0.08);
+  filter: grayscale(0.6);
   z-index: 2;
 }
 

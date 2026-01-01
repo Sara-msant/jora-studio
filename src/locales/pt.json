@@ -12,5 +12,37 @@
         "status": "Status:",
         "area": "Área:",
         "year": "Ano:"
+    },
+    "contact": {
+        "title": "Contacto",
+        "description": "Adoramos ouvir você. Se você está planejando um novo projeto ou explorando ideias, nossa equipe o guiará em cada etapa — desde o conceito até a conclusão.",
+        "infoTitle": "Informações",
+        "phone": "Telefone",
+        "email": "E-mail",
+        "name": "Nome",
+        "surname": "Sobrenome",
+        "projectLocation": "Localização do Projeto",
+        "projectType": "Tipo de Projeto",
+        "briefDescription": "Breve Descrição do Projeto",
+        "selectType": "Selecione um tipo",
+        "types": {
+            "residential": "Residencial",
+            "partnerships": "Parcerias",
+            "commercial": "Hotéis",
+            "other": "Outro"
+        },
+        "disclaimer": "Ao enviar seus dados, você está nos dando permissão para usar as informações para ajudá-lo e entrar em contato com você. Não se preocupe, podemos garantir que a totalidade dos seus dados está segura.",
+        "submit": "Enviar",
+        "sending": "Enviando...",
+        "successMessage": "Obrigado! Recebemos sua mensagem.",
+        "errorMessage": "Desculpe, algo deu errado. Por favor, tente novamente mais tarde.",
+        "validationError": "Por favor, preencha nome, e-mail, descrição do projeto e selecione um tipo de projeto.",
+        "errors": {
+            "nameRequired": "Nome é obrigatório",
+            "emailRequired": "E-mail é obrigatório",
+            "locationRequired": "Localização do projeto é obrigatória",
+            "projectTypeRequired": "Por favor, selecione um tipo de projeto",
+            "descriptionRequired": "Descrição do projeto é obrigatória"
+        }
     }
 }

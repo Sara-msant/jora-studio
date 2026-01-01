@@ -2,53 +2,51 @@
   <PageWrapper>
     <main class="contact-main">
       <section class="contact-content">
-        <!-- LEFT: Image -->
-        <div class="contact-image">
-          <img src="@/assets/contact-us/contact-us.png" alt="Contact Us" />
-        </div>
-
-        <!-- RIGHT: Form and Info -->
-        <div class="contact-right">
-          <!-- Top Row: Header + Info Card -->
-          <div class="contact-top-row">
-            <!-- Header Section -->
-            <div class="contact-header">
-              <h1 class="contact-title">Contact Us</h1>
-              <p class="contact-description">
-                We'd love to hear from you. Whether you're planning a new project or exploring
-                ideas, our team will guide you through each step — from concept to completion.
-              </p>
-            </div>
-
-            <!-- Contact Info Card -->
-            <aside class="contact-info">
-              <h2 class="info-title">Info</h2>
-              <div class="info-block">
-                <p class="info-label">Phone</p>
-                <p class="info-value">+351 919 998 681<br />+351 914 371 356</p>
-              </div>
-              <div class="info-block">
-                <p class="info-label">Email</p>
-                <p class="info-value">hello@jorastudio.com<br />Algarve, Portugal</p>
-              </div>
-            </aside>
+        <!-- LEFT: Image + Info Card -->
+        <div class="contact-left">
+          <div class="contact-image">
+            <img src="@/assets/contact-us/contact-us.png" alt="Contact Us" />
           </div>
 
-          <!-- Contact Form -->
+          <!-- Contact Info Card -->
+          <aside class="contact-info">
+            <h2 class="info-title">{{ t('contact.infoTitle') }}</h2>
+            <div class="info-block">
+              <p class="info-label">{{ t('contact.phone') }}</p>
+              <p class="info-value">+351 919 998 681<br />+351 914 371 356</p>
+            </div>
+            <div class="info-block">
+              <p class="info-label">{{ t('contact.email') }}</p>
+              <p class="info-value">hello@jorastudio.com<br />Algarve, Portugal</p>
+            </div>
+          </aside>
+        </div>
+
+        <!-- RIGHT: Header + Form -->
+        <div class="contact-right">
+          <!-- Header Section -->
+          <div class="contact-header">
+            <h1 class="contact-title">{{ t('contact.title') }}</h1>
+            <p class="contact-description">
+              {{ t('contact.description') }}
+            </p>
+          </div>
           <form class="contact-form" @submit.prevent="handleSubmit">
             <div class="form-row">
               <div class="form-group">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">{{ t('contact.name') }}</label>
                 <input
                   id="name"
                   v-model="form.name"
                   type="text"
                   class="form-input"
+                  :class="{ 'input-error': fieldErrors.name }"
                   placeholder=""
                 />
+                <p v-if="fieldErrors.name" class="field-error">{{ fieldErrors.name }}</p>
               </div>
               <div class="form-group">
-                <label for="surname" class="form-label">Surname</label>
+                <label for="surname" class="form-label">{{ t('contact.surname') }}</label>
                 <input
                   id="surname"
                   v-model="form.surname"
@@ -61,17 +59,19 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label">{{ t('contact.email') }}</label>
                 <input
                   id="email"
                   v-model="form.email"
                   type="email"
                   class="form-input"
+                  :class="{ 'input-error': fieldErrors.email }"
                   placeholder=""
                 />
+                <p v-if="fieldErrors.email" class="field-error">{{ fieldErrors.email }}</p>
               </div>
               <div class="form-group">
-                <label for="phone" class="form-label">Phone</label>
+                <label for="phone" class="form-label">{{ t('contact.phone') }}</label>
                 <input
                   id="phone"
                   v-model="form.phone"
@@ -84,50 +84,64 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="location" class="form-label">Project Location</label>
+                <label for="location" class="form-label">{{ t('contact.projectLocation') }}</label>
                 <input
                   id="location"
                   v-model="form.location"
                   type="text"
                   class="form-input"
+                  :class="{ 'input-error': fieldErrors.location }"
                   placeholder=""
                 />
+                <p v-if="fieldErrors.location" class="field-error">{{ fieldErrors.location }}</p>
               </div>
               <div class="form-group">
-                <label for="type" class="form-label">Type Of Project</label>
-                <select id="type" v-model="form.type" class="form-input">
-                  <option value="">Select a type</option>
-                  <option value="residential">Residential</option>
-                  <option value="commercial">Commercial</option>
-                  <option value="other">Other</option>
+                <label for="type" class="form-label">{{ t('contact.projectType') }}</label>
+                <select
+                  id="type"
+                  v-model="form.type"
+                  class="form-input"
+                  :class="{ 'input-error': fieldErrors.type }"
+                >
+                  <option value="" disabled>{{ t('contact.selectType') }}</option>
+                  <option value="residential">{{ t('contact.types.residential') }}</option>
+                  <option value="partnerships">{{ t('contact.types.partnerships') }}</option>
+                  <option value="commercial">{{ t('contact.types.commercial') }}</option>
+                  <option value="other">{{ t('contact.types.other') }}</option>
                 </select>
+                <p v-if="fieldErrors.type" class="field-error">{{ fieldErrors.type }}</p>
               </div>
             </div>
 
             <div class="form-group full-width">
-              <label for="description" class="form-label">Brief Project Description</label>
+              <label for="description" class="form-label">{{
+                t('contact.briefDescription')
+              }}</label>
               <textarea
                 id="description"
                 v-model="form.description"
                 class="form-textarea"
+                :class="{ 'input-error': fieldErrors.description }"
                 placeholder=""
                 rows="5"
               ></textarea>
+              <p v-if="fieldErrors.description" class="field-error">
+                {{ fieldErrors.description }}
+              </p>
             </div>
 
             <p class="form-disclaimer">
-              By submitting your data, you are giving us permission to use the information to assist
-              you and contact you. Don't worry, we can reassure the entirety of your data is secure.
+              {{ t('contact.disclaimer') }}
             </p>
 
             <button type="submit" class="submit-btn" :disabled="loading">
-              {{ loading ? 'Sending...' : 'Submit' }}
+              {{ loading ? t('contact.sending') : t('contact.submit') }}
             </button>
             <p v-if="status === 'ok'" class="form-status success">
-              Thanks! We received your message.
+              {{ t('contact.successMessage') }}
             </p>
             <p v-if="status === 'error'" class="form-status error">
-              Sorry, something went wrong. Please try again later.
+              {{ t('contact.errorMessage') }}
             </p>
           </form>
         </div>
@@ -138,7 +152,10 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import PageWrapper from '@/components/PageWrapper.vue'
+
+const { t } = useI18n()
 
 const form = ref({
   name: '',
@@ -152,13 +169,43 @@ const form = ref({
 
 const loading = ref(false)
 const status = ref<'idle' | 'ok' | 'error'>('idle')
+const fieldErrors = ref({
+  name: '',
+  email: '',
+  location: '',
+  type: '',
+  description: '',
+})
 
 const handleSubmit = async () => {
   status.value = 'idle'
+  fieldErrors.value = { name: '', email: '', location: '', type: '', description: '' }
 
-  if (!form.value.name || !form.value.email || !form.value.description) {
-    status.value = 'error'
-    alert('Please fill name, email, and project description.')
+  // Validate fields
+  if (!form.value.name) {
+    fieldErrors.value.name = t('contact.errors.nameRequired')
+  }
+  if (!form.value.email) {
+    fieldErrors.value.email = t('contact.errors.emailRequired')
+  }
+  if (!form.value.location) {
+    fieldErrors.value.location = t('contact.errors.locationRequired')
+  }
+  if (!form.value.type) {
+    fieldErrors.value.type = t('contact.errors.projectTypeRequired')
+  }
+  if (!form.value.description) {
+    fieldErrors.value.description = t('contact.errors.descriptionRequired')
+  }
+
+  // Return if any field is invalid
+  if (
+    !form.value.name ||
+    !form.value.email ||
+    !form.value.location ||
+    !form.value.description ||
+    !form.value.type
+  ) {
     return
   }
 
@@ -176,6 +223,7 @@ const handleSubmit = async () => {
     }
 
     status.value = 'ok'
+    fieldErrors.value = { name: '', email: '', location: '', type: '', description: '' }
     form.value = {
       name: '',
       surname: '',
@@ -209,18 +257,26 @@ const handleSubmit = async () => {
   margin: 0 auto;
 }
 
-/* LEFT: Image */
+/* LEFT: Image and Info Card */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .contact-image {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   height: fit-content;
+  max-height: 400px;
 }
 
 .contact-image img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 /* RIGHT: Form and content */
@@ -254,7 +310,6 @@ const handleSubmit = async () => {
   font-size: 0.95rem;
   line-height: 1.7;
   color: #323542;
-  max-width: 50ch;
   font-family: 'Geist Mono', monospace;
 }
 
@@ -353,6 +408,17 @@ const handleSubmit = async () => {
 
 .form-textarea {
   resize: vertical;
+}
+
+.input-error {
+  border-color: #b71c1c !important;
+}
+
+.field-error {
+  font-size: 0.7rem;
+  color: #b71c1c;
+  margin-top: 0.3rem;
+  font-family: 'Geist Mono', monospace;
 }
 
 .form-disclaimer {
