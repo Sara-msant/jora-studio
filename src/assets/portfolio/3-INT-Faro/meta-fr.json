@@ -1,0 +1,11 @@
+{
+  "title": "APT_02",
+  "type": "Appartement",
+  "location": "Faro, Algarve",
+  "area": "125 m²",
+  "year": "2025–2026",
+  "status": "En cours",
+  "description": "Transformation complète d’un appartement traditionnel situé à São Pedro, repensé comme un espace de vie ouvert et contemporain.\n\nÀ l’origine, le logement était divisé en une succession de petites pièces cloisonnées. Le plan a été entièrement redessiné afin de créer un espace de vie fluide, généreux et cohérent, favorisant la continuité spatiale et la lumière naturelle.\n\nL’ancienne véranda a été intégrée comme une extension directe de la cuisine, apportant lumière et profondeur à l’espace de vie. Un bloc central autoportant a été introduit dans le séjour afin d’optimiser les rangements tout en structurant les circulations et les proportions de l’espace.\n\nLa cuisine a été redessinée autour d’une palette de matériaux raffinée, conciliant fonctionnalité et chaleur. L’une des chambres existantes a été transformée en suite, et une nouvelle salle de bains a été créée afin d’améliorer le confort et la fluidité des usages.",
+  "order": 3,
+  "slug": "apt-02-sao-pedro"
+}
