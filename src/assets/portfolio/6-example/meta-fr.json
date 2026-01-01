@@ -1,9 +1,11 @@
 {
-    "title": "Example 6",
-    "type": "Apartment",
-    "location": "Faro, Portugal",
-    "area": "125 m²",
-    "description": "A complete transformation of a traditional apartment into an open, contemporary living space.",
-    "order": 6,
-    "slug": "example-6"
+  "title": "Fiametta",
+  "type": "Maison unifamiliale",
+  "location": "Aroeira, Portugal",
+  "area": "225 m²",
+  "year": "2025–2026",
+  "status": "En cours",
+  "description": "Le programme du projet portait sur la redéfinition de l’espace de vie et de la cuisine, deux zones qui manquaient initialement de cohérence spatiale et de continuité visuelle.\n\nLa démarche architecturale a cherché à instaurer un dialogue clair et fluide entre ces espaces à travers un langage spatial et matériel commun, capable de structurer l’intérieur tout en renforçant la perception d’un cadre de vie unifié.\n\nDans cette optique, un sol en béton poli a été appliqué à l’ensemble des espaces de vie. Sa surface continue, son caractère minéral et son expression sobre permettent de relier les volumes de manière fluide, tout en apportant une écriture contemporaine et intemporelle.\n\nLa chambre a également fait l’objet d’un travail attentif, afin de répondre précisément aux besoins du client en termes de confort, de fonctionnalité et d’usage quotidien.\n\nDéveloppé en étroite collaboration avec le client, le projet conjugue clarté spatiale, cohérence matérielle et bien-être, en conciliant exigences fonctionnelles et expression architecturale raffinée.",
+  "order": 6,
+  "slug": "fiametta-aroeira"
 }

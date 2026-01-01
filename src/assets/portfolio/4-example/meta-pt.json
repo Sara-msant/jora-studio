@@ -1,9 +1,11 @@
 {
-    "title": "Example 4",
-    "type": "Apartment",
-    "location": "Faro, Portugal",
-    "area": "125 m²",
-    "description": "A complete transformation of a traditional apartment into an open, contemporary living space.",
-    "order": 4,
-    "slug": "example-4"
+  "title": "Blue Moon",
+  "type": "Moradia Unifamiliar",
+  "location": "Algarve, Portugal",
+  "area": "400 m²",
+  "year": 2026,
+  "status": "Em curso",
+  "description": "Banhada por luz natural, esta residência foi concebida para reforçar a clareza espacial, o conforto e o diálogo entre materiais. O projeto atribui especial importância a escolhas responsáveis e ambientalmente conscientes.\n\nA arquitetura procura criar um ambiente de habitação equilibrado e fluido, através de uma seleção cuidada de acabamentos e texturas duráveis, valorizadas tanto pelas suas qualidades estéticas como pelo seu desempenho a longo prazo.\n\nOs espaços comuns são definidos por um pavimento contínuo em resina azul, pensado como elemento unificador dos volumes. Este material reflete a luz natural e introduz uma expressão contemporânea subtil nos espaços de convivência.\n\nEm contraste, os quartos são revestidos com pavimento em madeira de tonalidade quente, proveniente de produção responsável, promovendo uma atmosfera mais íntima e acolhedora.\n\nAs áreas sanitárias incorporam acabamentos em pedra, selecionados pela sua durabilidade, textura natural e caráter intemporal.",
+  "order": 4,
+  "slug": "blue-moon"
 }

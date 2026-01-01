@@ -1,9 +1,11 @@
 {
-    "title": "Example 5",
-    "type": "Apartment",
-    "location": "Faro, Portugal",
-    "area": "125 m²",
-    "description": "A complete transformation of a traditional apartment into an open, contemporary living space.",
-    "order": 5,
-    "slug": "example-5"
+  "title": "ARQ_P04",
+  "type": "Single-Family House",
+  "location": "Ericeira, Mafra, Lisbon",
+  "area": "160 m²",
+  "year": 2017,
+  "status": "Designed / Unbuilt",
+  "description": "This single-family housing project is located in the coastal town of Ericeira, within the municipality of Mafra, and is set within a planned urban development integrated into the consolidated fabric of the village.\n\nConceived as a four-bedroom residence, the spatial organization is structured around a clear distinction between public and private domains. The entrance zone concentrates the circulation core, where a generous hall and staircase act as a spatial threshold between levels.\n\nThe ground floor is entirely dedicated to the social areas, with the living room and kitchen conceived as a continuous open-plan space. This level prioritizes a direct and protected relationship with the rear garden, reinforcing privacy and outdoor living over a visual connection to the main street frontage.\n\nThe upper floor follows the same architectural logic: all bedrooms are oriented toward the rear of the plot, strengthening the relationship with the garden while eliminating visual exposure to the public street. This approach ensures domestic comfort, privacy, and a calm living environment within an urban setting.",
+  "order": 5,
+  "slug": "arq-p04-ericeira"
 }

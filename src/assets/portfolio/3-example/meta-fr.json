@@ -1,9 +1,11 @@
 {
-    "title": "Example 3",
-    "type": "Apartment",
-    "location": "Faro, Portugal",
-    "area": "125 m²",
-    "description": "A complete transformation of a traditional apartment into an open, contemporary living space.",
-    "order": 3,
-    "slug": "example-3"
+  "title": "ARQ_P03",
+  "type": "Maison unifamiliale / Tourisme rural",
+  "location": "Pai Viegas, Guarda",
+  "area": "185 m²",
+  "year": 2016,
+  "status": "Projet conçu / Non construit",
+  "description": "Implanté sur un versant de la chaîne montagneuse de la Serra da Estrela, à environ 800 mètres d’altitude, ce projet se définit par une relation intense et soigneusement maîtrisée avec le paysage environnant. Situé au sein d’une propriété rurale à proximité du village de Pai Viegas, le site se caractérise par une présence visuelle continue et dominante dans toutes les directions.\n\nLa stratégie d’implantation s’appuie sur la réutilisation d’un ancien entrepôt en pierre, situé à la limite de la propriété. Cette préexistence joue un rôle structurant dans le projet, agissant comme une charnière entre les espaces de vie et les espaces privés, tout en portant une dimension à la fois fonctionnelle et symbolique.\n\nÀ partir de cet élément d’ancrage, la maison se développe en deux volumes purs et blancs, disposés en forme de L, donnant naissance à un patio semi-fermé. Cet espace intermédiaire ne cherche pas à mettre en valeur la construction existante de manière explicite, mais se trouve naturellement qualifié par sa présence.\n\nL’attitude architecturale adopte une posture volontairement retenue face au paysage. La maison est majoritairement fermée, ne s’ouvrant que sur une seule façade soigneusement orientée. Les vues sur le territoire sont progressivement révélées depuis l’intérieur, tandis que le patio ne se découvre pleinement qu’en sortant de l’habitation.\n\nCe rapport maîtrisé au paysage permet d’introduire différents modes de perception et d’usage de l’espace, transformant la beauté omniprésente du site en une séquence de découverte. L’architecture devient ainsi un instrument de médiation entre l’habitant et un territoire d’une intensité exceptionnelle.",
+  "order": 4,
+  "slug": "arq-p03-l-viegas"
 }

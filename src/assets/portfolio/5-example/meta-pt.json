@@ -1,9 +1,11 @@
 {
-    "title": "Example 5",
-    "type": "Apartment",
-    "location": "Faro, Portugal",
-    "area": "125 m²",
-    "description": "A complete transformation of a traditional apartment into an open, contemporary living space.",
-    "order": 5,
-    "slug": "example-5"
+  "title": "ARQ_P04",
+  "type": "Moradia Unifamiliar",
+  "location": "Ericeira, Mafra, Lisboa",
+  "area": "160 m²",
+  "year": 2017,
+  "status": "Projeto Executado / Não Construído",
+  "description": "Projeto de moradia unifamiliar localizado na vila da Ericeira, no concelho de Mafra, implantado num loteamento urbano integrado na malha consolidada da vila.\n\nDe tipologia T4, a organização espacial parte de uma leitura clara entre espaço público e privado. A zona de entrada é aproveitada para concentrar a circulação vertical, através de um hall generoso e da escada de acesso ao piso superior, funcionando como elemento de transição entre os diferentes níveis da habitação.\n\nO piso térreo é inteiramente dedicado às áreas sociais, com sala e cozinha em open space, promovendo uma relação direta e contínua com o jardim a tardoz. Esta opção privilegia a vivência exterior e a privacidade, em detrimento da relação direta com a fachada principal e a rua.\n\nNo piso superior, mantém-se a mesma lógica conceptual: os quartos orientam-se para o tardoz do lote, reforçando a ligação ao espaço exterior mais resguardado e eliminando qualquer relação visual direta com a via pública. A estratégia de implantação e orientação garante conforto, privacidade e uma vivência doméstica protegida, em consonância com o contexto urbano envolvente.",
+  "order": 5,
+  "slug": "arq-p04-ericeira"
 }
