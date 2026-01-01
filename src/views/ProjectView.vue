@@ -215,7 +215,7 @@ const closeFullscreen = () => {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1rem;
   position: relative;
   box-sizing: border-box;
 }
@@ -240,12 +240,9 @@ const closeFullscreen = () => {
 }
 
 .project-meta {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto; /* label | value | label | value */
+  columns: 2;
   column-gap: 1.5rem;
-  row-gap: 0.35rem;
   font-size: 0.8rem;
-  margin-bottom: 1.5rem;
 }
 
 .meta-label {
@@ -253,11 +250,15 @@ const closeFullscreen = () => {
   font-size: 0.8rem;
   font-weight: 700;
   font-family: 'Geist Mono', monospace;
+  margin-bottom: 0.25rem;
+  break-inside: avoid;
 }
 
 .meta-value {
   font-weight: 500;
   font-family: 'Geist Mono', monospace;
+  margin-bottom: 1rem;
+  break-inside: avoid;
 }
 
 .project-description {
@@ -375,11 +376,13 @@ const closeFullscreen = () => {
   .project-gallery-wrapper {
     grid-column: 1;
     grid-row: 2;
+    padding-bottom: 1rem;
   }
 
   .project-info-wrapper {
     grid-column: 1;
     grid-row: 3;
+    padding-bottom: 1rem;
   }
 
   .project-buttons {
@@ -432,7 +435,7 @@ const closeFullscreen = () => {
   }
 
   .project-meta {
-    grid-template-columns: auto 1fr;
+    columns: 1;
   }
 
   .project-divider {
