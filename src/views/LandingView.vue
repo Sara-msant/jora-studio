@@ -77,8 +77,8 @@ const goToWelcome = () => {
 
 /* blue dot */
 .landing-dot {
-  width: clamp(2rem, 8vw, 6rem);
-  height: clamp(2rem, 8vw, 6rem);
+  width: clamp(1rem, 5vw, 3rem);
+  height: clamp(1rem, 5vw, 3rem);
   border-radius: 50%;
   background-color: #64b5ff;
   /* light blue */
