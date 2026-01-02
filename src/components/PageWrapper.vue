@@ -1,6 +1,6 @@
 <template>
   <div class="jora page-wrapper">
-    <Header />
+    <Header :is-white="headerIsWhite" />
     <main class="content">
       <slot />
     </main>
@@ -9,6 +9,10 @@
 
 <script setup lang="ts">
 import Header from '@/components/Header.vue'
+
+defineProps<{
+  headerIsWhite?: boolean
+}>()
 </script>
 
 <style scoped>

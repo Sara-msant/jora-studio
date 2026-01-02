@@ -1,29 +1,28 @@
 <template>
-  <div class="jora" :style="joraStyle">
-    <Header is-white />
-
+  <PageWrapper header-is-white :style="joraStyle">
     <main class="content">
       <p ref="typeTarget" class="text typewriter-js"></p>
     </main>
-  </div>
+  </PageWrapper>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import joraWelcomeImage from '@/assets/jora-welcome.png'
-import Header from '@/components/Header.vue'
+import PageWrapper from '@/components/PageWrapper.vue'
 
 const { t } = useI18n()
 
 const joraStyle = {
   backgroundImage: `url(${joraWelcomeImage})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
 }
 
 const fullText = t('welcome')
 const typeTarget = ref<HTMLElement | null>(null)
-const instagramHref =
-  'https://www.instagram.com/jorastudio_architecture?igsh=MTZ3YWRsaXFhdGk2cg%3D%3D&utm_source=qr'
 
 onMounted(() => {
   let index = 0
@@ -60,34 +59,11 @@ onMounted(() => {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   line-height: 1.4;
   font-family: 'Courier New', monospace;
-  /* if you put \n in the translation and want hard line breaks: */
   white-space: pre-line;
 }
 
-.footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-.social {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1rem; /* adjust icon size */
-  margin-left: 0.75rem; /* spacing between icons */
-  text-decoration: none;
-  opacity: 0.85;
-  transition: 0.2s ease;
-}
-
-.social:hover {
-  opacity: 1;
-}
-
 .text.typewriter-js {
-  white-space: pre-wrap; /* allows normal wrapping */
+  white-space: pre-wrap;
   position: relative;
 }
 
@@ -114,10 +90,6 @@ onMounted(() => {
 }
 
 @media (max-width: 900px) {
-  .jora {
-    padding: 1.5rem;
-  }
-
   .content {
     max-width: 100%;
   }
