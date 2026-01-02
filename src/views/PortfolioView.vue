@@ -108,7 +108,7 @@ const carouselConfig = computed(() => {
     return {
       ...baseConfig,
       wrapAround: false,
-      dir: 'ttb',
+      dir: 'ttb' as const,
       height: '100%',
     }
   }
@@ -116,7 +116,7 @@ const carouselConfig = computed(() => {
   // Desktop: horizontal with breakpoints, allow wrapping
   return {
     ...baseConfig,
-    dir: 'ltr',
+    dir: 'ltr' as const,
     height: '100%',
     breakpoints: {
       0: { itemsToShow: 1 },
@@ -141,7 +141,7 @@ if (typeof window !== 'undefined') {
 .portfolio-grid-wrapper {
   flex: 1;
   min-height: 0;
-  height: calc(100vh - var(--header-h) - 6rem);
+  height: calc(100vh - var(--header-h) - 8rem);
   position: relative;
   overflow: hidden;
 }
