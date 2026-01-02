@@ -2,7 +2,7 @@
   <header class="jora-header" :class="{ 'jora-white': isWhite }">
     <div class="jora-logo" @click="goHome">
       <div class="logo-main">JORA.</div>
-      <div class="logo-sub alumni-sans">Studio</div>
+      <div class="logo-sub">Studio</div>
       <div class="logo-tagline">Architecture & Interiors</div>
     </div>
 
@@ -67,14 +67,20 @@ const goHome = () => {
 }
 
 .logo-sub {
-  font-size: 01rem;
-  line-height: 1rem;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
   font-family: 'Alumni Sans', sans-serif;
 }
 
 .logo-tagline {
+  margin-top: 0.25rem;
   font-size: 1rem;
   line-height: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-family: 'Alumni Sans', sans-serif;
 }
 

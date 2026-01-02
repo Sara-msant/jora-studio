@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Alumni+Sans&family=Geist+Mono&display=swap');
 
 :root {
-  --header-h: 80px; /* adjust to your real header height */
+  --header-h: 100px; /* adjust to your real header height */
 }
 
 .jora {
