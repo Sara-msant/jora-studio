@@ -97,7 +97,6 @@ const parseBold = (text: string) => {
   width: 100%;
   max-width: 620px;
   min-width: 500px;
-  padding: 2rem 2rem 1.8rem;
   box-sizing: border-box;
 }
 
@@ -195,6 +194,7 @@ const parseBold = (text: string) => {
 
   .note-inner {
     max-width: 100%;
+    min-width: 0;
   }
   .collage {
     display: none;
