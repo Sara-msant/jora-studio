@@ -44,5 +44,19 @@
             "projectTypeRequired": "Veuillez sélectionner un type de projet",
             "descriptionRequired": "La description du projet est obligatoire"
         }
+    },
+    "about": {
+        "title": "Jora Studio.",
+        "description": "**JORA Studio** est dirigé par Rachel Cambier et Joaquim Pinheiro Torres, un duo international de designers/architectes aux racines **belges et portugaises**.\n\nEnsemble, ils apportent plus de 25 ans d'expérience combinée en architecture, design d'intérieur et création de mobilier sur mesure.\n\nLeur nouvelle collaboration fusionne deux cultures de design distinctes — la précision raffinée du nord de l'Europe et la chaleur naturelle du sud — créant une esthétique distinctive à la fois **intemporelle et contemporaine**.\n\nEnraciné dans l'architecture et guidé par une profonde sensibilité aux matériaux, à la lumière et aux proportions, **JORA Studio** crée des environnements qui semblent naturels tout en étant méticuleusement composés.\n\nLeur philosophie commune repose sur le luxe discret : une approche qui valorise la **retenue**, l'**authenticité** et l'**artisanat** plutôt que l'excès.\n\nOpérant depuis l'Algarve, au Portugal et travaillant sur des projets internationaux, **JORA Studio** offre des services de design complets intégrant l'architecture, les intérieurs et le design personnalisé dans un seul récit cohérent.",
+        "rachel": {
+            "name": "Rachel",
+            "role": "PDG & Architecte Intérieure",
+            "location": "Faro, Algarve"
+        },
+        "joaquim": {
+            "name": "Joaquim",
+            "role": "PDG & Architecte",
+            "location": "Faro, Algarve"
+        }
     }
 }

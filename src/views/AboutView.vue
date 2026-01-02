@@ -1,62 +1,18 @@
 <template>
   <PageWrapper>
     <div class="about-grid">
-      <!-- LEFT: collage -->
-      <section class="collage">
-        <div class="collage-stage">
-          <div class="collage-frame collage-frame--large">
-            <img :src="images.groupA" alt="Studio portrait" draggable="false" />
-          </div>
-
-          <div class="collage-frame collage-frame--mid">
-            <img :src="images.groupB" alt="Studio portrait" draggable="false" />
-          </div>
-
-          <div class="collage-frame collage-frame--small">
-            <img :src="images.groupC" alt="Studio portrait" draggable="false" />
-          </div>
-        </div>
-      </section>
-
       <!-- CENTER: note -->
       <section class="note">
         <div class="note-inner">
-          <h1 class="note-title">Jora Studio.</h1>
+          <h1 class="note-title">{{ $t('about.title') }}</h1>
           <div class="note-rule" />
 
           <div class="note-body">
-            <p>
-              JORA Studio is led by Rachel Cambier and Joaquim Pinheiro Torres, an international duo
-              of designers/architects with Belgian and Portuguese roots.
-            </p>
-
-            <p>
-              Together, they bring over 25 years of combined experience in architecture, interior
-              design, and bespoke furniture creation.
-            </p>
-
-            <p>
-              Their new collaboration merges two distinct design cultures — the refined precision of
-              Northern Europe and the natural warmth of the South — resulting in a distinctive
-              aesthetic that is both timeless and contemporary.
-            </p>
-
-            <p>
-              Grounded in architecture and guided by a deep sensitivity to materials, light, and
-              proportion, JORA Studio crafts environments that feel effortless yet meticulously
-              composed.
-            </p>
-
-            <p>
-              Their shared philosophy is rooted in quiet luxury: an approach that values restraint,
-              authenticity, and craftsmanship over excess.
-            </p>
-
-            <p>
-              Operating from Algarve, Portugal and working on international projects, JORA Studio
-              delivers comprehensive design services that integrate architecture, interiors, and
-              custom design into one seamless narrative.
-            </p>
+            <p
+              v-for="(paragraph, index) in $t('about.description').split('\n\n')"
+              :key="index"
+              v-html="parseBold(paragraph)"
+            ></p>
           </div>
         </div>
       </section>
@@ -74,9 +30,9 @@
               <img :src="images.rachel" alt="Rachel" draggable="false" />
             </div>
             <div class="profile-meta">
-              <div class="profile-name">Rachel</div>
-              <div class="profile-role">CEO &amp; Interior Architect</div>
-              <div class="profile-loc">Faro, Algarve</div>
+              <div class="profile-name">{{ $t('about.rachel.name') }}</div>
+              <div class="profile-role">{{ $t('about.rachel.role') }}</div>
+              <div class="profile-loc">{{ $t('about.rachel.location') }}</div>
             </div>
           </article>
         </a>
@@ -86,9 +42,9 @@
             <img :src="images.joaquim" alt="Joaquim" draggable="false" />
           </div>
           <div class="profile-meta">
-            <div class="profile-name">Joaquim</div>
-            <div class="profile-role">CEO &amp; Architect</div>
-            <div class="profile-loc">Faro, Algarve</div>
+            <div class="profile-name">{{ $t('about.joaquim.name') }}</div>
+            <div class="profile-role">{{ $t('about.joaquim.role') }}</div>
+            <div class="profile-loc">{{ $t('about.joaquim.location') }}</div>
           </div>
         </article>
       </aside>
@@ -100,12 +56,12 @@
 import PageWrapper from '@/components/PageWrapper.vue'
 
 const images = {
-  // replace these with your real imports/urls
-  groupA: new URL('@/assets/about/group.png', import.meta.url).href,
-  groupB: new URL('@/assets/about/group.png', import.meta.url).href,
-  groupC: new URL('@/assets/about/group.png', import.meta.url).href,
   rachel: new URL('@/assets/about/rachel.png', import.meta.url).href,
   joaquim: new URL('@/assets/about/joaquim.png', import.meta.url).href,
+}
+
+const parseBold = (text: string) => {
+  return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
 }
 </script>
 
@@ -126,67 +82,9 @@ const images = {
   width: 100%;
 
   display: grid;
-  grid-template-columns: minmax(560px, 1.05fr) 1.35fr 0.65fr;
+  grid-template-columns: 1.35fr 0.65fr;
   gap: 2.25rem;
   align-items: start;
-}
-
-/* ---------- Collage ---------- */
-.collage {
-  position: relative;
-  min-height: 560px;
-  max-width: 640px;
-}
-
-.collage-stage {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  padding-left: 56px;
-  overflow: visible; /* keep shadows */
-}
-
-.collage-frame {
-  position: absolute;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
-
-  transform-origin: center center; /* ✅ */
-}
-
-.collage-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-
-  transform: none !important;
-}
-
-.collage-frame--large {
-  top: 40px;
-  left: 0;
-  width: 480px;
-  height: 360px;
-}
-
-.collage-frame--mid {
-  top: 285px;
-  left: 160px;
-  width: 460px;
-  height: 300px;
-  transform: rotate(-4deg);
-}
-
-.collage-frame--small {
-  top: 415px;
-  left: 10px;
-  width: 280px;
-  height: 200px;
-  transform: rotate(-2deg);
 }
 
 /* ---------- Note ---------- */
@@ -198,16 +96,14 @@ const images = {
 .note-inner {
   width: 100%;
   max-width: 620px;
-  background: #fff36b;
-  border-radius: 18px;
+  min-width: 500px;
   padding: 2rem 2rem 1.8rem;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
   box-sizing: border-box;
 }
 
 .note-title {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -221,7 +117,7 @@ const images = {
 
 .note-body {
   margin-top: 1.5rem;
-  font-size: 0.92rem;
+  font-size: 0.8rem;
   line-height: 1.55;
   color: rgba(0, 0, 0, 0.78);
   font-family: 'Geist Mono', monospace;
