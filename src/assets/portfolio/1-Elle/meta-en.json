@@ -1,11 +1,11 @@
 {
-  "title": "APT_02",
-  "type": "Apartment",
-  "location": "Faro, Algarve",
-  "area": "125 m²",
-  "year": "2025–2026",
-  "status": "In progress",
-  "description": "Complete transformation of a traditional apartment located in São Pedro, reimagined as an open and contemporary living space.\n\nOriginally divided into a sequence of small, compartmentalized rooms, the layout was entirely redesigned to create a fluid, generous, and coherent living environment, enhancing spatial continuity and natural light.\n\nThe former veranda was integrated as a direct extension of the kitchen, bringing light and depth to the main living area. A freestanding central block was introduced in the living space to optimize storage while structuring circulation and defining the proportions of the interior.\n\nThe kitchen was redesigned around a refined material palette, balancing functionality and warmth. One of the existing bedrooms was converted into a suite, and a new bathroom was created to improve comfort and the overall fluidity of use.",
-  "order": 3,
-  "slug": "apt-02-sao-pedro"
+  "title": "ARQ_P01",
+  "type": "Single-Family House",
+  "location": "Condeixa, Coimbra",
+  "area": "285 m²",
+  "year": 2021,
+  "status": "Built",
+  "description": "The project is based on the concept of the Impluvium, conceived as a spatial device for light, orientation, and connection to the landscape. The design responds directly to the site’s topography, with solar orientation and visual openness as key guiding principles.\n\nThe house is organized around two main volumes arranged in an L-shaped layout, creating a clear relationship between solid and void. Their intersection defines the core architectural gesture, allowing a functional separation between Day and Night areas while structuring the overall use of the house.\n\nFrom this initial gesture, a continuous third volume completes the composition, forming a clear three-volume system. These volumetric intersections shape the building’s elevations and frame a central semi-cloister, where the swimming pool acts as the spatial and atmospheric focus.\n\nThe cloister is completed by a fourth, non-built element: an open void defined by the surrounding landscape, reinforcing the relationship between architecture, light, and place.",
+  "order": 1,
+  "slug": "ARQ_P01"
 }
