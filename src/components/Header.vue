@@ -89,6 +89,12 @@ const goHome = () => {
   gap: 0.25rem;
   cursor: pointer;
   align-self: center;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
 }
 
 .jora-menu span {
@@ -96,6 +102,7 @@ const goHome = () => {
   height: 2px;
   border-radius: 999px;
   background-color: #323542;
+  transition: background-color 0.3s ease;
 }
 
 .jora-header.jora-white {
