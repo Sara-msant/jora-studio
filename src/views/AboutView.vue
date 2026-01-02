@@ -293,27 +293,8 @@ const images = {
     width: 100%;
   }
 
-  .collage {
-    min-height: 520px;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .profiles {
-    padding-top: 0;
-    justify-items: center;
-  }
-}
-
-@media (max-width: 650px) {
   .about-main {
     padding: 2rem 1.5rem;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    width: 100%;
   }
 
   .note-inner {
@@ -343,15 +324,30 @@ const images = {
     height: 36vw;
   }
 
+  .profiles {
+    padding-top: 0;
+    grid-template-columns: 1fr 1fr;
+    min-width: 0;
+    gap: 0rem;
+    justify-items: center;
+  }
+
   .profile {
     grid-template-columns: 1fr;
-    justify-items: center;
     text-align: center;
   }
 
   .profile-photo {
     width: 140px;
     height: 190px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
   }
 }
 </style>
