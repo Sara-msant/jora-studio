@@ -73,7 +73,6 @@ const goHome = () => {
 }
 
 .logo-tagline {
-  margin-top: 0.25rem;
   font-size: 1rem;
   line-height: 1rem;
   letter-spacing: 0.12em;
