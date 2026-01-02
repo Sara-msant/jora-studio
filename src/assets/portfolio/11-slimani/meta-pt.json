@@ -1,11 +1,9 @@
 {
-  "title": "ARQ_P09",
-  "type": "Moradia Unifamiliar",
-  "location": "Abrantes",
-  "area": "158 m²",
-  "year": 2016,
-  "status": "Projeto Aprovado / Não Construído",
-  "description": "Implantada em solo rural, numa propriedade agrícola e florestal nos arredores de Abrantes, esta moradia surge num terreno que já integrava pré-existências construídas, utilizadas como apoio às atividades desenvolvidas no local.\n\nAs linhas de força definidas por esses elementos existentes — cuja preservação foi um requisito do cliente — orientaram uma solução arquitetónica simultaneamente inovadora e funcional, onde o desenho resulta diretamente da leitura do lugar.\n\nA estratégia formal assenta na ideia de um fragmento da casa que parece ‘ceder’ ao terreno, enquanto o volume principal se mantém suspenso sobre um embasamento escuro, correspondente ao piso térreo. Esta operação reforça a relação entre arquitetura e topografia, conferindo ao conjunto uma forte identidade conceptual.\n\nA leitura da habitação resulta de uma composição equilibrada entre corpos sólidos e planos oblíquos, que contrastam com a disciplina de um volume branco mais contido, pontuado por aberturas precisas. O resultado é uma linguagem arquitetónica expressiva, onde tensão e equilíbrio coexistem de forma harmoniosa.",
-  "order": 11,
-  "slug": "arq-p09-fallen-house"
+    "title":  "ARQ_P09",
+    "type":  "Moradia Unifamiliar",
+    "location":  "Abrantes",
+    "area":  "158 m²",
+    "year":  2016,
+    "status":  "Projeto Aprovado / Não Construído",
+    "description":  "Implantada em solo rural, numa propriedade agrícola e florestal nos arredores de Abrantes, esta moradia surge num terreno que já integrava pré-existências construídas, utilizadas como apoio às atividades desenvolvidas no local.\n\nAs linhas de força definidas por esses elementos existentes — cuja preservação foi um requisito do cliente — orientaram uma solução arquitetónica simultaneamente inovadora e funcional, onde o desenho resulta diretamente da leitura do lugar.\n\nA estratégia formal assenta na ideia de um fragmento da casa que parece ‘ceder’ ao terreno, enquanto o volume principal se mantém suspenso sobre um embasamento escuro, correspondente ao piso térreo. Esta operação reforça a relação entre arquitetura e topografia, conferindo ao conjunto uma forte identidade conceptual.\n\nA leitura da habitação resulta de uma composição equilibrada entre corpos sólidos e planos oblíquos, que contrastam com a disciplina de um volume branco mais contido, pontuado por aberturas precisas. O resultado é uma linguagem arquitetónica expressiva, onde tensão e equilíbrio coexistem de forma harmoniosa."
 }

@@ -1,11 +1,9 @@
 {
-    "title": "ARQ_P01",
-    "type": "Moradia Unifamiliar",
-    "location": "Condeixa, Coimbra",
-    "area": "285 m²",
-    "year": 2021,
-    "status": "Construído",
-    "description": "O projeto nasce sob o conceito de Impluvium, entendido como dispositivo espacial de luz, orientação e relação com a paisagem. A implantação responde diretamente à topografia do terreno, assumindo como premissas fundamentais a orientação solar e o desafogo visual.\n\nA volumetria organiza-se a partir de dois corpos principais que se articulam numa forma em L, estabelecendo um diálogo claro entre cheios e vazios. A interseção destes volumes constitui o gesto estruturante do projeto, permitindo a separação funcional entre as zonas Day e Night e definindo a lógica de uso da habitação.\n\nA partir deste gesto inicial, o conjunto prolonga-se num terceiro corpo contínuo, que fecha a composição em três volumes e consolida a leitura do edifício. As intersecções volumétricas resolvem de forma coerente a expressão dos alçados, tanto para o exterior como para o espaço interior central — um semi-claustro onde a piscina assume um papel central, organizador e atmosférico.\n\nO claustro é finalmente completado por um quarto elemento não edificado: um vazio habitado pela paisagem, que encerra o sistema do Impluvium e reforça a relação entre arquitetura, luz e território.",
-    "order": 1,
-    "slug": "ARQ_P01"
+    "title":  "ARQ_P01",
+    "type":  "Moradia Unifamiliar",
+    "location":  "Condeixa, Coimbra",
+    "area":  "285 m²",
+    "year":  2021,
+    "status":  "Construído",
+    "description":  "O projeto nasce sob o conceito de Impluvium, entendido como dispositivo espacial de luz, orientação e relação com a paisagem. A implantação responde diretamente à topografia do terreno, assumindo como premissas fundamentais a orientação solar e o desafogo visual.\n\nA volumetria organiza-se a partir de dois corpos principais que se articulam numa forma em L, estabelecendo um diálogo claro entre cheios e vazios. A interseção destes volumes constitui o gesto estruturante do projeto, permitindo a separação funcional entre as zonas Day e Night e definindo a lógica de uso da habitação.\n\nA partir deste gesto inicial, o conjunto prolonga-se num terceiro corpo contínuo, que fecha a composição em três volumes e consolida a leitura do edifício. As intersecções volumétricas resolvem de forma coerente a expressão dos alçados, tanto para o exterior como para o espaço interior central — um semi-claustro onde a piscina assume um papel central, organizador e atmosférico.\n\nO claustro é finalmente completado por um quarto elemento não edificado: um vazio habitado pela paisagem, que encerra o sistema do Impluvium e reforça a relação entre arquitetura, luz e território."
 }

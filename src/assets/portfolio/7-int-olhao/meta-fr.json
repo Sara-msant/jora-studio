@@ -1,11 +1,9 @@
 {
-  "title": "Nutty",
-  "type": "Maison unifamiliale",
-  "location": "Algarve, Portugal",
-  "area": "300 m²",
-  "year": 2026,
-  "status": "En cours",
-  "description": "Caractérisé par de généreuses hauteurs sous plafond, le projet relève le défi de créer un espace à la fois élégant et chaleureux, sans compromettre la sensation d’ouverture et de continuité spatiale.\n\nLes matériaux naturels occupent une place centrale dans la composition architecturale. Le bois de noyer apporte profondeur et chaleur, entrant en dialogue avec des murs clairs et épurés ainsi qu’avec des surfaces minérales aux finitions raffinées.\n\nUn bureau sur mesure a été conçu spécifiquement pour l’espace de travail, assurant des proportions justes et une intégration harmonieuse dans l’ensemble du projet.\n\nLe sol en parquet renforce le caractère résidentiel de l’intérieur, apportant texture et douceur tout en participant à l’équilibre matériel de l’espace.\n\nUn dispositif d’éclairage soigneusement étudié vient révéler la matérialité de chaque élément, créant une atmosphère calme et intime malgré l’ampleur des volumes.",
-  "order": 7,
-  "slug": "nutty"
+    "title":  "Nutty",
+    "type":  "Maison unifamiliale",
+    "location":  "Algarve, Portugal",
+    "area":  "300 m²",
+    "year":  2026,
+    "status":  "En cours",
+    "description":  "Caractérisé par de généreuses hauteurs sous plafond, le projet relève le défi de créer un espace à la fois élégant et chaleureux, sans compromettre la sensation d’ouverture et de continuité spatiale.\n\nLes matériaux naturels occupent une place centrale dans la composition architecturale. Le bois de noyer apporte profondeur et chaleur, entrant en dialogue avec des murs clairs et épurés ainsi qu’avec des surfaces minérales aux finitions raffinées.\n\nUn bureau sur mesure a été conçu spécifiquement pour l’espace de travail, assurant des proportions justes et une intégration harmonieuse dans l’ensemble du projet.\n\nLe sol en parquet renforce le caractère résidentiel de l’intérieur, apportant texture et douceur tout en participant à l’équilibre matériel de l’espace.\n\nUn dispositif d’éclairage soigneusement étudié vient révéler la matérialité de chaque élément, créant une atmosphère calme et intime malgré l’ampleur des volumes."
 }

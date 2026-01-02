@@ -1,11 +1,9 @@
 {
-  "title": "ARQ_P08",
-  "type": "Moradia Unifamiliar",
-  "location": "Belas Clube de Campo, Sintra",
-  "area": "165 m²",
-  "year": 2021,
-  "status": "Projeto Aprovado / Em Construção",
-  "description": "Localizada no loteamento do Belas Clube de Campo, em Sintra, esta moradia unifamiliar implanta-se num lote de topografia acidentada, condição que se assume como elemento determinante na organização espacial e volumétrica do projeto.\n\nDe tipologia T7, a habitação integra, para além das áreas sociais e dos espaços privados, um conjunto alargado de programas complementares. A semi-cave acolhe a garagem, ginásio, sauna, piscina interior e uma área de lazer com sala de bilhar e cinema, libertando os pisos superiores para uma vivência mais aberta e fluida.\n\nA volumetria desenvolve-se a partir de um corpo recortado em forma de L, ajustado ao perfil do terreno. Esta configuração permite libertar o espaço exterior a tardoz, destinando-o a jardim e piscina, reforçando a relação entre interior e exterior.\n\nFormalmente, o edifício afirma-se através de volumes brancos recortados e intersetados, que emolduram planos mais escuros, definidos pela cor e pelo vidro. Estes elementos situam-se entre as palas das extensas varandas, criando um jogo de cheios e vazios que confere profundidade, ritmo e uma leitura contemporânea ao conjunto arquitetónico.",
-  "order": 10,
-  "slug": "arq-p08-belas-clube-de-campo"
+    "title":  "ARQ_P08",
+    "type":  "Moradia Unifamiliar",
+    "location":  "Belas Clube de Campo, Sintra",
+    "area":  "165 m²",
+    "year":  2021,
+    "status":  "Projeto Aprovado / Em Construção",
+    "description":  "Localizada no loteamento do Belas Clube de Campo, em Sintra, esta moradia unifamiliar implanta-se num lote de topografia acidentada, condição que se assume como elemento determinante na organização espacial e volumétrica do projeto.\n\nDe tipologia T7, a habitação integra, para além das áreas sociais e dos espaços privados, um conjunto alargado de programas complementares. A semi-cave acolhe a garagem, ginásio, sauna, piscina interior e uma área de lazer com sala de bilhar e cinema, libertando os pisos superiores para uma vivência mais aberta e fluida.\n\nA volumetria desenvolve-se a partir de um corpo recortado em forma de L, ajustado ao perfil do terreno. Esta configuração permite libertar o espaço exterior a tardoz, destinando-o a jardim e piscina, reforçando a relação entre interior e exterior.\n\nFormalmente, o edifício afirma-se através de volumes brancos recortados e intersetados, que emolduram planos mais escuros, definidos pela cor e pelo vidro. Estes elementos situam-se entre as palas das extensas varandas, criando um jogo de cheios e vazios que confere profundidade, ritmo e uma leitura contemporânea ao conjunto arquitetónico."
 }

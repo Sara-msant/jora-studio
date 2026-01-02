@@ -1,0 +1,64 @@
+{
+    "projects": [
+        {
+            "folder": "1-Elle",
+            "order": 1,
+            "slug": "apt-02-sao-pedro"
+        },
+        {
+            "folder": "2-BlueMoon",
+            "order": 2,
+            "slug": "blue-moon"
+        },
+        {
+            "folder": "3-INT-Faro",
+            "order": 3,
+            "slug": "INT_Faro"
+        },
+        {
+            "folder": "4-LViegas",
+            "order": 4,
+            "slug": "arq-p03-l-viegas"
+        },
+        {
+            "folder": "5-Ericeira",
+            "order": 5,
+            "slug": "arq-p04-ericeira"
+        },
+        {
+            "folder": "6-int-aroeira",
+            "order": 6,
+            "slug": "fiametta-aroeira"
+        },
+        {
+            "folder": "7-int-olhao",
+            "order": 7,
+            "slug": "nutty"
+        },
+        {
+            "folder": "8-CA",
+            "order": 8,
+            "slug": "arq-p05-ca"
+        },
+        {
+            "folder": "9-LA",
+            "order": 9,
+            "slug": "arq-p06-la"
+        },
+        {
+            "folder": "10-belas",
+            "order": 10,
+            "slug": "arq-p08-belas-clube-de-campo"
+        },
+        {
+            "folder": "11-slimani",
+            "order": 11,
+            "slug": "arq-p09-fallen-house"
+        },
+        {
+            "folder": "12-SHouse",
+            "order": 12,
+            "slug": "arq-p10-casa-s"
+        }
+    ]
+}

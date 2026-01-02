@@ -1,11 +1,9 @@
 {
-  "title": "APT_02",
-  "type": "Apartamento",
-  "location": "Faro, Algarve",
-  "area": "125 m²",
-  "year": "2025–2026",
-  "status": "Em curso",
-  "description": "Transformação completa de um apartamento tradicional localizado em São Pedro, reinterpretado como um espaço de habitação aberto e contemporâneo.\n\nOriginalmente dividido numa sucessão de pequenas divisões compartimentadas, o layout foi totalmente redesenhado com o objetivo de criar um espaço fluido, generoso e coerente, valorizando a continuidade espacial e a entrada de luz natural.\n\nA antiga varanda foi integrada como uma extensão direta da cozinha, trazendo profundidade e luminosidade ao espaço social. Um bloco central autoportante foi introduzido na sala de estar, permitindo otimizar a arrumação e, simultaneamente, estruturar as circulações e as proporções do espaço.\n\nA cozinha foi redesenhada a partir de uma paleta de materiais refinada, conciliando funcionalidade e conforto. Um dos quartos existentes foi transformado em suite, e foi criada uma nova instalação sanitária, melhorando o conforto e a fluidez dos usos.",
-  "order": 3,
-  "slug": "apt-02-sao-pedro"
+    "title":  "APT_02",
+    "type":  "Apartamento",
+    "location":  "Faro, Algarve",
+    "area":  "125 m²",
+    "year":  "2025–2026",
+    "status":  "Em curso",
+    "description":  "Transformação completa de um apartamento tradicional localizado em São Pedro, reinterpretado como um espaço de habitação aberto e contemporâneo.\n\nOriginalmente dividido numa sucessão de pequenas divisões compartimentadas, o layout foi totalmente redesenhado com o objetivo de criar um espaço fluido, generoso e coerente, valorizando a continuidade espacial e a entrada de luz natural.\n\nA antiga varanda foi integrada como uma extensão direta da cozinha, trazendo profundidade e luminosidade ao espaço social. Um bloco central autoportante foi introduzido na sala de estar, permitindo otimizar a arrumação e, simultaneamente, estruturar as circulações e as proporções do espaço.\n\nA cozinha foi redesenhada a partir de uma paleta de materiais refinada, conciliando funcionalidade e conforto. Um dos quartos existentes foi transformado em suite, e foi criada uma nova instalação sanitária, melhorando o conforto e a fluidez dos usos."
 }

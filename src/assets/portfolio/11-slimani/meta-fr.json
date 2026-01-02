@@ -1,11 +1,9 @@
 {
-  "title": "ARQ_P09",
-  "type": "Maison unifamiliale",
-  "location": "Abrantes",
-  "area": "158 m²",
-  "year": 2016,
-  "status": "Projet approuvé / Non construit",
-  "description": "Implantée sur un terrain rural au sein d’une propriété agricole et forestière à proximité d’Abrantes, cette maison unifamiliale prend place sur un site intégrant déjà des constructions préexistantes, utilisées comme structures de soutien aux activités menées sur le terrain.\n\nLes lignes de force définies par ces éléments existants — dont la conservation constituait une exigence du maître d’ouvrage — ont orienté une solution architecturale à la fois innovante et fonctionnelle, où le projet émerge directement d’une lecture attentive du site.\n\nLa stratégie formelle repose sur l’idée d’un fragment de la maison qui semble « céder » au terrain, tandis que le volume principal est maintenu au-dessus d’un soubassement sombre correspondant au rez-de-chaussée. Ce geste renforce la relation entre architecture et topographie, conférant au projet une forte identité conceptuelle.\n\nLa lecture architecturale résulte d’une composition équilibrée entre volumes pleins et plans obliques, contrastant avec la rigueur d’un corps blanc plus contenu, ponctué d’ouvertures précises. Il en résulte une écriture architecturale expressive, où tension et équilibre coexistent de manière harmonieuse.",
-  "order": 11,
-  "slug": "arq-p09-fallen-house"
+    "title":  "ARQ_P09",
+    "type":  "Maison unifamiliale",
+    "location":  "Abrantes",
+    "area":  "158 m²",
+    "year":  2016,
+    "status":  "Projet approuvé / Non construit",
+    "description":  "Implantée sur un terrain rural au sein d’une propriété agricole et forestière à proximité d’Abrantes, cette maison unifamiliale prend place sur un site intégrant déjà des constructions préexistantes, utilisées comme structures de soutien aux activités menées sur le terrain.\n\nLes lignes de force définies par ces éléments existants — dont la conservation constituait une exigence du maître d’ouvrage — ont orienté une solution architecturale à la fois innovante et fonctionnelle, où le projet émerge directement d’une lecture attentive du site.\n\nLa stratégie formelle repose sur l’idée d’un fragment de la maison qui semble « céder » au terrain, tandis que le volume principal est maintenu au-dessus d’un soubassement sombre correspondant au rez-de-chaussée. Ce geste renforce la relation entre architecture et topographie, conférant au projet une forte identité conceptuelle.\n\nLa lecture architecturale résulte d’une composition équilibrée entre volumes pleins et plans obliques, contrastant avec la rigueur d’un corps blanc plus contenu, ponctué d’ouvertures précises. Il en résulte une écriture architecturale expressive, où tension et équilibre coexistent de manière harmonieuse."
 }

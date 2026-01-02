@@ -15,8 +15,11 @@ export interface PortfolioProject {
   order?: number
 }
 
-// load metadata for each project folder
-const metaModules = import.meta.glob('@/assets/portfolio/*/*.json', {
+// load consolidated portfolio metadata
+import portfolioMeta from '@/assets/portfolio/meta.json'
+
+// load language-specific metadata for each project folder
+const metaModules = import.meta.glob('@/assets/portfolio/*/meta-*.json', {
   eager: true,
 })
 
@@ -26,17 +29,24 @@ const imageModules = import.meta.glob('@/assets/portfolio/*/*.{png,jpg,jpeg,webp
 export const usePortfolioProjects = () => {
   const { locale } = useI18n()
   const projects = computed<PortfolioProject[]>(() => {
-    // folder -> meta
+    // folder -> meta (language-specific)
     const metaByFolder = new Map<string, any>()
+    // Build config from consolidated meta.json
+    const configByFolder = new Map<string, any>()
+    portfolioMeta.projects.forEach((project) => {
+      configByFolder.set(project.folder, { order: project.order, slug: project.slug })
+    })
 
     Object.entries(metaModules).forEach(([path, mod]) => {
       const parts = path.split('/')
       const folder = parts[parts.length - 2] as string // the project folder name
-      const file = parts[parts.length - 1] as string // meta-en.json etc.
+      const file = parts[parts.length - 1] as string // meta-en.json, meta-fr.json, etc.
+      const meta = (mod as any).default ?? mod
+
       if (file.startsWith('meta-')) {
+        // Language-specific content
         const lang = file.replace('meta-', '').replace('.json', '') // en, pt, fr
         if (lang === locale.value || (lang === 'en' && !metaByFolder.has(folder))) {
-          const meta = (mod as any).default ?? mod
           metaByFolder.set(folder, meta)
         }
       }
@@ -68,6 +78,7 @@ export const usePortfolioProjects = () => {
     const result: PortfolioProject[] = []
 
     metaByFolder.forEach((meta, folder) => {
+      const config = configByFolder.get(folder) ?? {}
       const imgEntry = imagesByFolder.get(folder) ?? {
         cover: undefined,
         images: [],
@@ -93,6 +104,7 @@ export const usePortfolioProjects = () => {
       ]
 
       const slug: string =
+        config.slug ??
         meta.slug ??
         folder
           .toLowerCase()
@@ -112,7 +124,7 @@ export const usePortfolioProjects = () => {
         description: meta.description ?? '',
         cover,
         gallery,
-        order: meta.order,
+        order: config.order ?? meta.order,
       }
 
       result.push(project)

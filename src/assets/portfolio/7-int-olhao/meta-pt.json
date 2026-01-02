@@ -1,11 +1,9 @@
 {
-  "title": "Nutty",
-  "type": "Moradia Unifamiliar",
-  "location": "Algarve, Portugal",
-  "area": "300 m²",
-  "year": 2026,
-  "status": "Em curso",
-  "description": "Definido por generosas alturas de pé-direito, o projeto enfrenta o desafio de criar um espaço simultaneamente elegante e acolhedor, sem comprometer a sensação de abertura e continuidade espacial.\n\nOs materiais naturais assumem um papel central na composição arquitetónica. A madeira de nogueira introduz profundidade e calor, estabelecendo um diálogo subtil com paredes claras e depuradas, bem como com superfícies minerais de acabamento refinado.\n\nO espaço de trabalho integra um escritório desenhado à medida, garantindo proporções equilibradas e uma integração harmoniosa no conjunto do projeto.\n\nO pavimento em madeira reforça o carácter residencial do interior, acrescentando textura e conforto, ao mesmo tempo que contribui para o equilíbrio material do espaço.\n\nUm sistema de iluminação cuidadosamente estudado valoriza a materialidade de cada elemento, criando uma atmosfera serena e íntima, apesar da escala dos volumes.",
-  "order": 7,
-  "slug": "nutty"
+    "title":  "Nutty",
+    "type":  "Moradia Unifamiliar",
+    "location":  "Algarve, Portugal",
+    "area":  "300 m²",
+    "year":  2026,
+    "status":  "Em curso",
+    "description":  "Definido por generosas alturas de pé-direito, o projeto enfrenta o desafio de criar um espaço simultaneamente elegante e acolhedor, sem comprometer a sensação de abertura e continuidade espacial.\n\nOs materiais naturais assumem um papel central na composição arquitetónica. A madeira de nogueira introduz profundidade e calor, estabelecendo um diálogo subtil com paredes claras e depuradas, bem como com superfícies minerais de acabamento refinado.\n\nO espaço de trabalho integra um escritório desenhado à medida, garantindo proporções equilibradas e uma integração harmoniosa no conjunto do projeto.\n\nO pavimento em madeira reforça o carácter residencial do interior, acrescentando textura e conforto, ao mesmo tempo que contribui para o equilíbrio material do espaço.\n\nUm sistema de iluminação cuidadosamente estudado valoriza a materialidade de cada elemento, criando uma atmosfera serena e íntima, apesar da escala dos volumes."
 }

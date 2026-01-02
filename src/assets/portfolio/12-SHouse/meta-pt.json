@@ -1,11 +1,9 @@
 {
-  "title": "ARQ_P10",
-  "type": "Moradia Unifamiliar",
-  "location": "Vila Franca de Xira",
-  "area": "147 m²",
-  "year": 2022,
-  "status": "Projeto Construído",
-  "description": "Moradia unifamiliar de tipologia T3 com escritório, implantada num contexto urbano em Vila Franca de Xira. A habitação assume uma postura deliberadamente mais fechada para a frente do lote, reforçando a privacidade e o controlo da relação com o espaço público.\n\nA estratégia de desenho resulta da leitura das condicionantes do lugar e das intenções do cliente, conduzindo a uma solução simultaneamente funcional e expressiva. O projeto organiza-se a partir de um volume claro e contido, onde a composição formal se torna elemento estruturante da identidade da casa.\n\nUma moldura contínua serpenteia ao longo da periferia do edifício, desenvolvendo-se de forma tridimensional e pontuando o conjunto com um maciço branco em balanço. Este gesto confere profundidade e dinamismo à volumetria.\n\nA leitura arquitetónica da habitação resulta de uma composição equilibrada entre corpos sólidos e planos oblíquos, que dialogam com a disciplina de um volume branco, pontuado por aberturas controladas. O resultado é uma linguagem coerente e contemporânea, onde forma e função se articulam de forma integrada.",
-  "order": 12,
-  "slug": "arq-p10-casa-s"
+    "title":  "ARQ_P10",
+    "type":  "Moradia Unifamiliar",
+    "location":  "Vila Franca de Xira",
+    "area":  "147 m²",
+    "year":  2022,
+    "status":  "Projeto Construído",
+    "description":  "Moradia unifamiliar de tipologia T3 com escritório, implantada num contexto urbano em Vila Franca de Xira. A habitação assume uma postura deliberadamente mais fechada para a frente do lote, reforçando a privacidade e o controlo da relação com o espaço público.\n\nA estratégia de desenho resulta da leitura das condicionantes do lugar e das intenções do cliente, conduzindo a uma solução simultaneamente funcional e expressiva. O projeto organiza-se a partir de um volume claro e contido, onde a composição formal se torna elemento estruturante da identidade da casa.\n\nUma moldura contínua serpenteia ao longo da periferia do edifício, desenvolvendo-se de forma tridimensional e pontuando o conjunto com um maciço branco em balanço. Este gesto confere profundidade e dinamismo à volumetria.\n\nA leitura arquitetónica da habitação resulta de uma composição equilibrada entre corpos sólidos e planos oblíquos, que dialogam com a disciplina de um volume branco, pontuado por aberturas controladas. O resultado é uma linguagem coerente e contemporânea, onde forma e função se articulam de forma integrada."
 }

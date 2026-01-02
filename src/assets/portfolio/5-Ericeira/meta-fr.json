@@ -1,11 +1,9 @@
 {
-  "title": "ARQ_P04",
-  "type": "Maison unifamiliale",
-  "location": "Ericeira, Mafra, Lisbonne",
-  "area": "160 m²",
-  "year": 2017,
-  "status": "Projet conçu / Non construit",
-  "description": "Projet de maison unifamiliale situé dans la ville côtière d’Ericeira, dans la commune de Mafra, implanté au sein d’un lotissement urbain intégré dans le tissu bâti consolidé de la ville.\n\nConçue comme une habitation de type T4, l’organisation spatiale repose sur une distinction claire entre les domaines public et privé. La zone d’entrée concentre le noyau de circulation, où un hall généreux et l’escalier constituent un espace de transition entre les différents niveaux.\n\nLe rez-de-chaussée est entièrement dédié aux espaces de vie, avec le séjour et la cuisine conçus comme un espace ouvert et continu. Ce niveau privilégie une relation directe et protégée avec le jardin situé à l’arrière de la parcelle, favorisant la vie extérieure et l’intimité au détriment d’un rapport direct avec la façade principale sur rue.\n\nÀ l’étage, la même logique architecturale est maintenue : l’ensemble des chambres est orienté vers l’arrière du terrain, renforçant la relation avec le jardin et supprimant toute exposition visuelle à l’espace public. Cette stratégie garantit confort, intimité et sérénité au sein d’un contexte urbain.",
-  "order": 5,
-  "slug": "arq-p04-ericeira"
+    "title":  "ARQ_P04",
+    "type":  "Maison unifamiliale",
+    "location":  "Ericeira, Mafra, Lisbonne",
+    "area":  "160 m²",
+    "year":  2017,
+    "status":  "Projet conçu / Non construit",
+    "description":  "Projet de maison unifamiliale situé dans la ville côtière d’Ericeira, dans la commune de Mafra, implanté au sein d’un lotissement urbain intégré dans le tissu bâti consolidé de la ville.\n\nConçue comme une habitation de type T4, l’organisation spatiale repose sur une distinction claire entre les domaines public et privé. La zone d’entrée concentre le noyau de circulation, où un hall généreux et l’escalier constituent un espace de transition entre les différents niveaux.\n\nLe rez-de-chaussée est entièrement dédié aux espaces de vie, avec le séjour et la cuisine conçus comme un espace ouvert et continu. Ce niveau privilégie une relation directe et protégée avec le jardin situé à l’arrière de la parcelle, favorisant la vie extérieure et l’intimité au détriment d’un rapport direct avec la façade principale sur rue.\n\nÀ l’étage, la même logique architecturale est maintenue : l’ensemble des chambres est orienté vers l’arrière du terrain, renforçant la relation avec le jardin et supprimant toute exposition visuelle à l’espace public. Cette stratégie garantit confort, intimité et sérénité au sein d’un contexte urbain."
 }

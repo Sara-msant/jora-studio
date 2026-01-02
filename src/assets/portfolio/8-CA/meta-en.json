@@ -1,11 +1,9 @@
 {
-  "title": "ARQ_P05",
-  "type": "Single-Family House",
-  "location": "Cascais, Lisbon",
-  "area": "160 m²",
-  "year": 2019,
-  "status": "Built",
-  "description": "Located within an urban subdivision integrated into the consolidated fabric of Cascais, this single-family house emerged from the challenge of designing a T3 dwelling with tightly constrained areas, resulting from legal regulations defined by the subdivision permit.\n\nThe spatial organization responds to these constraints through a clear and efficient layout. The ground floor is conceived as an open-plan space, promoting continuity between the living area and the kitchen, in a solution that balances functional requirements, permitted areas, and the client’s expectations.\n\nArchitecturally, the house is expressed through a carved and sinuous volume, approaching a neoplastic reading. A dark-toned base anchors the building to the ground, deliberately highlighting the upper volume, which is more fragmented and intentionally dissonant in both its chromatic and formal expression.\n\nThis volumetric and material contrast reinforces the identity of the house, allowing it to assert a distinct presence within the surrounding urban context while maintaining a domestic scale and a coherent integration into the existing fabric.",
-  "order": 8,
-  "slug": "arq-p05-ca"
+    "title": "8",
+    "type": "Single-Family House",
+    "location": "Cascais, Lisbon",
+    "area": "160 m²",
+    "year": 2019,
+    "status": "Built",
+    "description": "Located within an urban subdivision integrated into the consolidated fabric of Cascais, this single-family house emerged from the challenge of designing a T3 dwelling with tightly constrained areas, resulting from legal regulations defined by the subdivision permit.\n\nThe spatial organization responds to these constraints through a clear and efficient layout. The ground floor is conceived as an open-plan space, promoting continuity between the living area and the kitchen, in a solution that balances functional requirements, permitted areas, and the client’s expectations.\n\nArchitecturally, the house is expressed through a carved and sinuous volume, approaching a neoplastic reading. A dark-toned base anchors the building to the ground, deliberately highlighting the upper volume, which is more fragmented and intentionally dissonant in both its chromatic and formal expression.\n\nThis volumetric and material contrast reinforces the identity of the house, allowing it to assert a distinct presence within the surrounding urban context while maintaining a domestic scale and a coherent integration into the existing fabric."
 }

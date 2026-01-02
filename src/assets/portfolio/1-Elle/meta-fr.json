@@ -1,11 +1,9 @@
 {
-  "title": "ARQ_P01",
-  "type": "Maison unifamiliale",
-  "location": "Condeixa-Coimbra",
-  "area": "285 m²",
-  "year": 2021,
-  "status": "Construite",
-  "description": "Sous le thème de l’« Impluvium », et à partir des principes d’orientation solaire et de dégagement visuel clairement définis par la topographie du site, émergent deux corps principaux qui dialoguent entre eux et composent une forme en L. Leur point de rencontre constitue le geste fondateur du projet, permettant l’organisation de la maison en zones Nuit et Jour.\n\nÀ la suite de ce geste initial, le projet se prolonge par un volume continu qui vient refermer l’ensemble en trois corps bâtis. Ce jeu volumétrique structure l’écriture des façades, tant vers l’extérieur que vers l’espace central intérieur — un espace partiellement clos, conçu comme un cœur filtrant, au sein duquel s’inscrit la piscine.\n\nLe claustre est finalement complété par un « quatrième corps » non bâti : un vide uniquement habité par le paysage.",
-  "order": 1,
-  "slug": "ARQ_P01"
+    "title":  "ARQ_P01",
+    "type":  "Maison unifamiliale",
+    "location":  "Condeixa-Coimbra",
+    "area":  "285 m²",
+    "year":  2021,
+    "status":  "Construite",
+    "description":  "Sous le thème de l’« Impluvium », et à partir des principes d’orientation solaire et de dégagement visuel clairement définis par la topographie du site, émergent deux corps principaux qui dialoguent entre eux et composent une forme en L. Leur point de rencontre constitue le geste fondateur du projet, permettant l’organisation de la maison en zones Nuit et Jour.\n\nÀ la suite de ce geste initial, le projet se prolonge par un volume continu qui vient refermer l’ensemble en trois corps bâtis. Ce jeu volumétrique structure l’écriture des façades, tant vers l’extérieur que vers l’espace central intérieur — un espace partiellement clos, conçu comme un cœur filtrant, au sein duquel s’inscrit la piscine.\n\nLe claustre est finalement complété par un « quatrième corps » non bâti : un vide uniquement habité par le paysage."
 }

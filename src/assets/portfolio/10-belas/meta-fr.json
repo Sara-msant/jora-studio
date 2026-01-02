@@ -1,11 +1,9 @@
 {
-  "title": "ARQ_P08",
-  "type": "Maison unifamiliale",
-  "location": "Belas Clube de Campo, Sintra",
-  "area": "165 m²",
-  "year": 2021,
-  "status": "Projet approuvé / En construction",
-  "description": "Située au sein du lotissement du Belas Clube de Campo, à Sintra, cette maison unifamiliale s’implante sur un terrain à topographie accidentée, une condition qui devient déterminante dans la stratégie spatiale et volumétrique du projet.\n\nConçue comme une habitation de type T7, la maison intègre, au-delà des espaces de vie et des zones privées, un programme complémentaire étendu. Le niveau semi-enterré accueille le garage, la salle de sport, le sauna, la piscine intérieure ainsi que des espaces de loisirs comprenant une salle de billard et un cinéma, libérant ainsi les niveaux supérieurs pour une occupation plus ouverte et fluide.\n\nLa composition volumétrique s’organise autour d’une forme en L, soigneusement ajustée au profil du terrain. Cette configuration permet de dégager l’espace extérieur à l’arrière de la parcelle, destiné au jardin et à la piscine extérieure, renforçant la relation entre les espaces intérieurs et extérieurs.\n\nD’un point de vue formel, le bâtiment se définit par des volumes blancs découpés et interconnectés, qui encadrent des plans plus sombres articulés par la couleur et le verre. Ces éléments s’inscrivent entre les débords des larges terrasses, créant un jeu de pleins et de vides qui confère profondeur, rythme et une expression architecturale contemporaine à l’ensemble.",
-  "order": 10,
-  "slug": "arq-p08-belas-clube-de-campo"
+    "title":  "ARQ_P08",
+    "type":  "Maison unifamiliale",
+    "location":  "Belas Clube de Campo, Sintra",
+    "area":  "165 m²",
+    "year":  2021,
+    "status":  "Projet approuvé / En construction",
+    "description":  "Située au sein du lotissement du Belas Clube de Campo, à Sintra, cette maison unifamiliale s’implante sur un terrain à topographie accidentée, une condition qui devient déterminante dans la stratégie spatiale et volumétrique du projet.\n\nConçue comme une habitation de type T7, la maison intègre, au-delà des espaces de vie et des zones privées, un programme complémentaire étendu. Le niveau semi-enterré accueille le garage, la salle de sport, le sauna, la piscine intérieure ainsi que des espaces de loisirs comprenant une salle de billard et un cinéma, libérant ainsi les niveaux supérieurs pour une occupation plus ouverte et fluide.\n\nLa composition volumétrique s’organise autour d’une forme en L, soigneusement ajustée au profil du terrain. Cette configuration permet de dégager l’espace extérieur à l’arrière de la parcelle, destiné au jardin et à la piscine extérieure, renforçant la relation entre les espaces intérieurs et extérieurs.\n\nD’un point de vue formel, le bâtiment se définit par des volumes blancs découpés et interconnectés, qui encadrent des plans plus sombres articulés par la couleur et le verre. Ces éléments s’inscrivent entre les débords des larges terrasses, créant un jeu de pleins et de vides qui confère profondeur, rythme et une expression architecturale contemporaine à l’ensemble."
 }

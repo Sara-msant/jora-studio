@@ -2,15 +2,11 @@
   <PageWrapper>
     <div class="portfolio-grid-wrapper">
       <Carousel
+        :key="isMobile ? 'mobile' : 'desktop'"
         class="portfolio-carousel"
-        :wrap-around="true"
-        :mouse-drag="true"
-        :touch-drag="true"
-        :breakpoints="breakpoints"
-        :transition="450"
-        snap-align="start"
+        v-bind="carouselConfig"
       >
-        <Slide v-for="col in projectColumns" :key="col.key">
+        <Slide v-for="col in displayedProjects" :key="col.key">
           <div class="portfolio-col">
             <article v-if="col.top" class="portfolio-card" @click="goToProject(col.top)">
               <img :src="col.top.cover" :alt="col.top.title" draggable="false" />
@@ -47,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import PageWrapper from '@/components/PageWrapper.vue'
 import { usePortfolioProjects, type PortfolioProject } from '@/composables/usePortfolioProjects'
@@ -57,12 +53,26 @@ import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
 const { projects } = usePortfolioProjects()
 const router = useRouter()
+const isMobile = ref(window.innerWidth < 600)
 
 const goToProject = (project: PortfolioProject) => {
   router.push({ name: 'project', params: { slug: project.slug } })
 }
 
-// Pair projects into columns of 2: [top, bottom]
+// All projects as individual slides (for mobile)
+// Shows: 1, 2, 3, 4, 5, 6, 7, 8
+const projectSlides = computed(() => {
+  return projects.value.map((project) => ({
+    key: project.slug,
+    top: project,
+    bottom: undefined,
+  }))
+})
+
+// Pair projects into columns of 2 (for desktop)
+// Each slide shows 2 items vertically stacked (top/bottom)
+// Visual layout: 1 3 5 7
+//               2 4 6 8
 const projectColumns = computed(() => {
   const cols: Array<{ key: string; top?: PortfolioProject; bottom?: PortfolioProject }> = []
   for (let i = 0; i < projects.value.length; i += 2) {
@@ -78,13 +88,51 @@ const projectColumns = computed(() => {
   return cols
 })
 
+// Use individual slides on mobile, paired columns on desktop
+const displayedProjects = computed(() => {
+  return isMobile.value ? projectSlides.value : projectColumns.value
+})
+
 // Breakpoints are min-width based
-const breakpoints = {
-  0: { itemsToShow: 1 },
-  600: { itemsToShow: 2 },
-  900: { itemsToShow: 3 },
-  1200: { itemsToShow: 4 }, // 8 cards + peeks (4 cols x 2 rows)
+const baseConfig = {
+  wrapAround: true,
+  mouseDrag: true,
+  touchDrag: true,
+  transition: 450,
+  snapAlign: 'start',
 } as const
+
+const carouselConfig = computed(() => {
+  if (isMobile.value) {
+    // Mobile: simple vertical carousel, no wrapping
+    return {
+      ...baseConfig,
+      wrapAround: false,
+      dir: 'ttb',
+      height: '100%',
+    }
+  }
+
+  // Desktop: horizontal with breakpoints, allow wrapping
+  return {
+    ...baseConfig,
+    dir: 'ltr',
+    height: '100%',
+    breakpoints: {
+      0: { itemsToShow: 1 },
+      600: { itemsToShow: 2 },
+      900: { itemsToShow: 3 },
+      1200: { itemsToShow: 4 },
+    },
+  }
+})
+
+// Listen for window resize to update orientation
+if (typeof window !== 'undefined') {
+  window.addEventListener('resize', () => {
+    isMobile.value = window.innerWidth < 600
+  })
+}
 </script>
 
 <style scoped>
@@ -93,7 +141,7 @@ const breakpoints = {
 .portfolio-grid-wrapper {
   flex: 1;
   min-height: 0;
-  max-height: calc(100vh - var(--header-h) - 6rem);
+  height: calc(100vh - var(--header-h) - 6rem);
   position: relative;
   overflow: hidden;
 }
@@ -104,18 +152,34 @@ const breakpoints = {
 .portfolio-carousel :deep(.carousel__slide) {
   height: 100%;
   cursor: pointer;
+  width: 100%;
 }
 
-/* Track: minimal padding + small nudge */
-.portfolio-carousel :deep(.carousel__track) {
-  padding: 0.25rem 0;
-  transform: translateX(6px);
+.portfolio-carousel :deep(.carousel__viewport) {
+  overflow: hidden;
 }
 
-/* Spacing between columns (safe: use slide padding, not margins/gaps) */
-.portfolio-carousel :deep(.carousel__slide) {
-  padding: 0 0.75rem;
-  box-sizing: border-box;
+/* Track: minimal padding (desktop only) */
+@media (min-width: 601px) {
+  .portfolio-carousel :deep(.carousel__track) {
+    padding: 0.25rem 0;
+  }
+
+  .portfolio-carousel :deep(.carousel__slide) {
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile: no padding on slides/track for clean vertical scrolling */
+@media (max-width: 600px) {
+  .portfolio-carousel :deep(.carousel__track) {
+    padding: 0;
+  }
+
+  .portfolio-carousel :deep(.carousel__slide) {
+    padding: 1.5rem 0;
+  }
 }
 
 .portfolio-col {
@@ -186,6 +250,10 @@ const breakpoints = {
   font-family: 'Geist Mono', monospace;
 }
 
+.carousel.is-vertical .carousel__slide--clone:first-child {
+  margin: 0;
+}
+
 @media (hover: hover) {
   .portfolio-card:hover .portfolio-card-overlay {
     opacity: 1;
@@ -205,15 +273,24 @@ const breakpoints = {
   font-size: 2.5rem;
 }
 
+/* ===== Mobile (< 600px) ===== */
 @media (max-width: 600px) {
-  .portfolio-carousel :deep(.carousel__slide) {
-    padding: 0 0.5rem;
+  /* Carousel Track - let carousel handle scrolling naturally */
+  .portfolio-carousel :deep(.carousel__track) {
+    padding: 0;
   }
 
+  /* Column */
   .portfolio-col {
     gap: 1rem;
+    grid-template-rows: 1fr;
   }
 
+  .portfolio-col > article:nth-child(2) {
+    display: none;
+  }
+
+  /* Overlay */
   .portfolio-card-overlay {
     background: transparent;
     opacity: 1;
@@ -227,10 +304,19 @@ const breakpoints = {
     padding: 1rem;
   }
 
-  /* smaller spacers on mobile */
-  .portfolio-carousel :deep(.carousel__track)::before,
-  .portfolio-carousel :deep(.carousel__track)::after {
-    flex: 0 0 34px;
+  /* Navigation */
+  .portfolio-carousel :deep(.carousel__prev) {
+    order: -1;
+  }
+
+  .portfolio-carousel :deep(.carousel__next) {
+    order: 1;
+  }
+
+  /* Maintain padding while sliding or dragging */
+  .portfolio-carousel.is-sliding :deep(.carousel__slide),
+  .portfolio-carousel.is-dragging :deep(.carousel__slide) {
+    padding: 1.5rem 0 !important;
   }
 }
 </style>
