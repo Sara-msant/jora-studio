@@ -28,7 +28,15 @@
 
           <!-- Navigation -->
           <nav class="jora-menu-nav">
-            <button v-for="item in items" :key="item.key" class="nav-link" @click="go(item)">
+            <button
+              v-for="item in items"
+              :key="item.key"
+              class="nav-link"
+              :class="{ 'coming-soon': item.comingSoon }"
+              :title="item.comingSoon ? 'Coming Soon' : ''"
+              :disabled="item.comingSoon"
+              @click="go(item)"
+            >
               {{ t(item.labelKey) }}
             </button>
           </nav>
@@ -84,7 +92,7 @@ const items = [
   { key: 'portfolio', labelKey: 'nav.portfolio', to: '/portfolio' },
   { key: 'services', labelKey: 'nav.services', to: '/services' },
   { key: 'studio', labelKey: 'nav.studio', to: '/studio' },
-  { key: 'designLab', labelKey: 'nav.designLab', to: '/design-lab' },
+  { key: 'designLab', labelKey: 'nav.designLab', comingSoon: true },
   { key: 'contact', labelKey: 'nav.contact', to: '/contact-us' },
 ]
 
@@ -101,7 +109,10 @@ const setLang = (lang: string) => {
   langOpen.value = false
 }
 
-const go = (item: { to?: string }) => {
+const go = (item: { to?: string; comingSoon?: boolean }) => {
+  if (item.comingSoon) {
+    return
+  }
   if (item.to) router.push(item.to)
   close()
 }
@@ -247,9 +258,30 @@ onMounted(() => {
   cursor: pointer;
   padding: 0.1rem 0;
   color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.nav-link:hover {
+.nav-link:disabled {
+  cursor: not-allowed;
+}
+
+.nav-link.coming-soon {
+  opacity: 0.6;
+}
+
+.nav-link.coming-soon:hover {
+  opacity: 0.7;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.coming-soon-badge {
+  font-size: 0.8rem;
+}
+
+.nav-link:not(:disabled):hover {
   font-weight: 600;
   text-decoration: underline;
 }
