@@ -51,8 +51,7 @@ onMounted(() => {
   color: white;
   flex: 1;
   display: flex;
-  align-items: center;
-  max-width: 70%;
+  max-width: 80%;
 }
 
 .text {

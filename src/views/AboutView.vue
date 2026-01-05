@@ -66,15 +66,6 @@ const parseBold = (text: string) => {
 </script>
 
 <style scoped>
-.about-main {
-  min-height: calc(100vh - var(--header-h) - 4rem);
-  padding: 3.25rem 2rem 2rem;
-  box-sizing: border-box;
-  display: flex;
-  width: 100%;
-  overflow-x: hidden;
-}
-
 .about-grid {
   flex: 1;
   height: 100%;
@@ -186,10 +177,6 @@ const parseBold = (text: string) => {
     grid-template-columns: 1fr;
     gap: 2.25rem;
     width: 100%;
-  }
-
-  .about-main {
-    padding: 2rem 1.5rem;
   }
 
   .note-inner {

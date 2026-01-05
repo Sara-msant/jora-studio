@@ -1,37 +1,41 @@
 <template>
   <PageWrapper>
-    <section class="steps">
-      <div class="accordion">
-        <div
-          class="accordion-item"
-          v-for="(step, i) in steps"
-          :key="i"
-          :class="{ open: openIndices.includes(i) }"
-        >
-          <button
-            class="accordion-header"
-            type="button"
-            :aria-expanded="openIndices.includes(i)"
-            @click="toggle(i)"
+    <div class="services-grid-wrapper">
+      <section class="steps">
+        <div class="accordion">
+          <div
+            class="accordion-item"
+            v-for="(step, i) in steps"
+            :key="i"
+            :class="{ open: openIndices.includes(i) }"
           >
-            <div class="step-title">{{ step.title }}</div>
-            <span class="chev">▼</span>
-          </button>
+            <button
+              class="accordion-header"
+              type="button"
+              :aria-expanded="openIndices.includes(i)"
+              @click="toggle(i)"
+            >
+              <div class="step-title">{{ step.title }}</div>
+              <span class="chev">▼</span>
+            </button>
 
-          <div class="accordion-body">
-            <div class="panel-content">
-              {{ step.content }}
+            <div class="accordion-body">
+              <div class="panel-content">
+                <p v-for="(paragraph, index) in step.content.split('\n\n')" :key="index">
+                  {{ paragraph }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <aside class="highlight">
-      <div class="card">
-        <div class="card-text">Trust<br />The<br />Process.</div>
-      </div>
-    </aside>
+      <aside class="highlight">
+        <div class="card">
+          <div class="card-text">Trust<br />The<br />Process.</div>
+        </div>
+      </aside>
+    </div>
   </PageWrapper>
 </template>
 
@@ -80,6 +84,17 @@ const toggle = (i: number) => {
 </script>
 
 <style scoped>
+.services-grid-wrapper {
+  flex: 1;
+  min-height: 0;
+  height: calc(100vh - var(--header-h) - 8rem);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
 .services-page {
   min-height: 100vh;
   display: flex;
@@ -193,8 +208,8 @@ const toggle = (i: number) => {
   color: #323542;
   font-size: 0.95rem;
   line-height: 1.4;
-  max-width: 60ch;
   font-family: 'Geist Mono', monospace;
+  padding-right: 1rem;
 }
 
 .card {
@@ -246,6 +261,10 @@ const toggle = (i: number) => {
 
   .step-title {
     font-size: 1rem;
+  }
+
+  .panel-content {
+    font-size: 0.8rem;
   }
 
   .highlight {
