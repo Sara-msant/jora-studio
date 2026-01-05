@@ -75,12 +75,29 @@
             <!-- close button -->
             <button class="fullscreen-close" @click="closeFullscreen">×</button>
 
-            <!-- fullscreen image -->
-            <img
-              class="fullscreen-image"
-              :src="project.gallery[fullscreenIndex]"
-              :alt="'Image ' + (fullscreenIndex + 1)"
-            />
+            <!-- fullscreen carousel -->
+            <Carousel
+              class="fullscreen-carousel"
+              :items-to-show="1"
+              snap-align="center"
+              :wrap-around="true"
+              :mouse-drag="true"
+              :touch-drag="true"
+              :initial-slide="fullscreenIndex"
+            >
+              <Slide v-for="(img, index) in project.gallery" :key="index">
+                <figure class="fullscreen-image-card">
+                  <img
+                    :src="img"
+                    :alt="project.title + ' image ' + (index + 1)"
+                  />
+                </figure>
+              </Slide>
+
+              <template #addons>
+                <Navigation />
+              </template>
+            </Carousel>
           </div>
         </section>
 
@@ -454,14 +471,55 @@ const closeFullscreen = () => {
   align-items: center;
   justify-content: center;
   animation: fadeIn 0.25s ease;
+  padding: 2rem;
 }
 
-.fullscreen-image {
-  max-width: 90vw;
-  max-height: 90vh;
+.fullscreen-carousel {
+  width: 90vw;
+  height: 90vh;
+  max-width: 1200px;
+}
+
+:deep(.fullscreen-carousel .carousel__viewport) {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.fullscreen-image-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.fullscreen-image-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.fullscreen-carousel :deep(.carousel__prev),
+.fullscreen-carousel :deep(.carousel__next) {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  transition: all 0.2s ease;
+}
+
+.fullscreen-carousel :deep(.carousel__prev:hover),
+.fullscreen-carousel :deep(.carousel__next:hover) {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .fullscreen-close {
@@ -476,6 +534,7 @@ const closeFullscreen = () => {
   line-height: 1;
   opacity: 0.8;
   transition: opacity 0.2s;
+  z-index: 10000;
 }
 
 .fullscreen-close:hover {
