@@ -3,62 +3,62 @@
         {
             "folder": "1-Elle",
             "order": 1,
-            "slug": "apt-02-sao-pedro"
+            "slug": "arq_p01"
         },
         {
-            "folder": "2-BlueMoon",
+            "folder": "2-INT-BlueMoon",
             "order": 2,
-            "slug": "blue-moon"
+            "slug": "int_p01"
         },
         {
-            "folder": "3-INT-Faro",
+            "folder": "3-INT-SaoPedro",
             "order": 3,
-            "slug": "INT_Faro"
+            "slug": "int_p02"
         },
         {
             "folder": "4-LViegas",
             "order": 4,
-            "slug": "arq-p03-l-viegas"
+            "slug": "arq-p03"
         },
         {
             "folder": "5-Ericeira",
             "order": 5,
-            "slug": "arq-p04-ericeira"
+            "slug": "arq-p04"
         },
         {
             "folder": "6-int-aroeira",
             "order": 6,
-            "slug": "fiametta-aroeira"
+            "slug": "int_p03"
         },
         {
             "folder": "7-int-olhao",
             "order": 7,
-            "slug": "nutty"
+            "slug": "int_p04"
         },
         {
             "folder": "8-CA",
             "order": 8,
-            "slug": "arq-p05-ca"
+            "slug": "arq-p05"
         },
         {
             "folder": "9-LA",
             "order": 9,
-            "slug": "arq-p06-la"
+            "slug": "arq-p06"
         },
         {
             "folder": "10-belas",
             "order": 10,
-            "slug": "arq-p08-belas-clube-de-campo"
+            "slug": "arq-p08"
         },
         {
             "folder": "11-slimani",
             "order": 11,
-            "slug": "arq-p09-fallen-house"
+            "slug": "arq-p09"
         },
         {
             "folder": "12-SHouse",
             "order": 12,
-            "slug": "arq-p10-casa-s"
+            "slug": "arq-p10"
         }
     ]
 }
