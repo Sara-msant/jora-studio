@@ -30,8 +30,8 @@ const loadGoogleAnalytics = () => {
   document.head.appendChild(script)
 
   window.dataLayer = window.dataLayer || []
-  function gtag() {
-    window.dataLayer.push(arguments)
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args)
   }
   window.gtag = gtag
   gtag('js', new Date())
