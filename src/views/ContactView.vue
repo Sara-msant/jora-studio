@@ -16,7 +16,7 @@
           </div>
           <div class="info-block">
             <p class="info-label">{{ t('contact.email') }}</p>
-            <p class="info-value">hello@jorastudio.com<br />Algarve, Portugal</p>
+            <p class="info-value">hello@jora-studio.com<br />Algarve, Portugal</p>
           </div>
         </aside>
       </div>
