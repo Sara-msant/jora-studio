@@ -12,7 +12,7 @@
           <h2 class="info-title">{{ t('contact.infoTitle') }}</h2>
           <div class="info-block">
             <p class="info-label">{{ t('contact.phone') }}</p>
-            <p class="info-value">+351 919 998 681<br />+351 914 371 356</p>
+            <p class="info-value">+351 919 588 681<br />+351 914 371 196</p>
           </div>
           <div class="info-block">
             <p class="info-label">{{ t('contact.email') }}</p>
@@ -253,7 +253,7 @@ const handleSubmit = async () => {
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   height: fit-content;
-  max-height: 400px;
+  max-height: 435px;
   display: flex;
   align-items: center;
   justify-content: center;
