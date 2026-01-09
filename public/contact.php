@@ -68,6 +68,7 @@ if (is_dir($phpMailerBase)) {
         $mailer->setFrom($fromAddress, $fromName);
         $mailer->addAddress($toAddress);
         $mailer->addReplyTo($input['email'], $fullName);
+        $mailer->CharSet = 'UTF-8';
         $mailer->Subject = $subject;
         $mailer->Body = $body;
 
