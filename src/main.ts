@@ -7,6 +7,7 @@ import './assets/main.css'
 
 import i18n from './i18n'
 import vuetify from './plugins/vuetify'
+import noRightClick from './directives/noRightClick'
 
 const app = createApp(App)
 
@@ -14,6 +15,7 @@ app.use(createPinia())
 app.use(router)
 app.use(i18n)
 app.use(vuetify)
+app.directive('no-right-click', noRightClick)
 
 // Google Analytics setup
 declare global {

@@ -9,7 +9,7 @@
         <Slide v-for="col in displayedProjects" :key="col.key">
           <div class="portfolio-col">
             <article v-if="col.top" class="portfolio-card" @click="goToProject(col.top)">
-              <img :src="col.top.cover" :alt="col.top.title" draggable="false" />
+              <img v-no-right-click :src="col.top.cover" :alt="col.top.title" draggable="false" />
 
               <div class="portfolio-card-overlay">
                 <div class="portfolio-card-overlay-content">
@@ -21,7 +21,7 @@
             </article>
 
             <article v-if="col.bottom" class="portfolio-card" @click="goToProject(col.bottom)">
-              <img :src="col.bottom.cover" :alt="col.bottom.title" draggable="false" />
+              <img v-no-right-click :src="col.bottom.cover" :alt="col.bottom.title" draggable="false" />
 
               <div class="portfolio-card-overlay">
                 <div class="portfolio-card-overlay-content">

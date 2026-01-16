@@ -57,6 +57,7 @@
                   @click="openFullscreen(index)"
                 >
                   <img
+                    v-no-right-click
                     :src="img"
                     :alt="project.title + ' image ' + (index + 1)"
                     draggable="false"
@@ -88,6 +89,7 @@
               <Slide v-for="(img, index) in project.gallery" :key="index">
                 <figure class="fullscreen-image-card">
                   <img
+                    v-no-right-click
                     :src="img"
                     :alt="project.title + ' image ' + (index + 1)"
                   />
