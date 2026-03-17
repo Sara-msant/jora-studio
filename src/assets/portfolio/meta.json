@@ -74,6 +74,40 @@
             "folder": "15-LV",
             "order": 15,
             "slug": "arq-p13"
+        },
+        {
+            "folder": "16-The Plush Pavilion",
+            "order": 16,
+            "slug": "arq-p14"
+        },
+
+         {
+            "folder": "17-FR",
+            "order": 17,
+            "slug": "arq-p15"
+        },
+
+          {
+            "folder": "18-Arst",
+            "order": 18,
+            "slug": "arq-p16"
+        },
+
+          {
+            "folder": "19-Lumen",
+            "order": 19,
+            "slug": "arq-p17"
+        },
+
+          {
+            "folder": "20-Comprida",
+            "order": 20,
+            "slug": "arq-p18"
         }
+
+        
+        
+
+        
     ]
 }

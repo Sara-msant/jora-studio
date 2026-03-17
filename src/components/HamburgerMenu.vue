@@ -139,7 +139,7 @@ onMounted(() => {
 
 /* Menu card */
 .jora-menu {
-  background: #ffe65b;
+  background: #76C1FF;
   border-radius: 24px;
   box-shadow: 0 22px 45px rgba(0, 0, 0, 0.25);
 
@@ -225,7 +225,7 @@ onMounted(() => {
 .lang-list {
   position: absolute;
   top: 130%;
-  background: #fff9c7;
+  background: #EBEBEB;
   padding: 0.35rem 0.55rem;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -332,7 +332,7 @@ onMounted(() => {
 
   list-style: none;
   border-radius: 14px;
-  background: #fff9c7;
+  background: #EBEBEB;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 

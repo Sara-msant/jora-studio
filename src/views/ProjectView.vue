@@ -182,7 +182,7 @@ const closeFullscreen = () => {
 .project-back {
   border: none;
   background: transparent;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
@@ -226,9 +226,9 @@ const closeFullscreen = () => {
   gap: 1rem;
 }
 
-/* LEFT: yellow info card */
+/* LEFT: Blue info card */
 .project-info {
-  background: #fff476;
+  background: #76C1FF;
   border-radius: 24px;
   padding: 2rem 2.5rem;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
@@ -240,16 +240,16 @@ const closeFullscreen = () => {
 }
 
 .project-title {
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
 }
 
 .project-type {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  font-family: 'Alumni Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0em;
+  font-family: 'Geist Mono', sans-serif;
 }
 
 .project-divider {
@@ -265,8 +265,8 @@ const closeFullscreen = () => {
 }
 
 .meta-label {
-  letter-spacing: 0.14em;
-  font-size: 0.8rem;
+  letter-spacing: 0em;
+  font-size: 1rem;
   font-weight: 700;
   font-family: 'Geist Mono', monospace;
   margin-bottom: 0.25rem;
@@ -371,7 +371,7 @@ const closeFullscreen = () => {
 .project-next {
   border: none;
   background: transparent;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;

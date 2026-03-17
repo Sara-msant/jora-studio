@@ -74,9 +74,9 @@ const goHome = () => {
 
 .logo-tagline {
   font-size: 1rem;
-  line-height: 1rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  line-height: 0.5rem;
+  letter-spacing: 0em;
+  text-transform: capitalize;
   display: flex;
   align-items: center;
   gap: 0.75rem;

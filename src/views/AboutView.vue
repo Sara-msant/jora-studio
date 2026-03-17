@@ -159,16 +159,18 @@ const parseBold = (text: string) => {
 }
 
 .profile-name {
-  font-weight: 700;
-  font-size: 0.98rem;
+  font-weight: 600;
+  font-size: 2rem;
   margin-bottom: 0.25rem;
 }
 
 .profile-role,
 .profile-loc {
-  font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.65);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #323542;
   line-height: 1.35;
+  font-family: 'Geist Mono', monospace;
 }
 
 /* ---------- Responsive ---------- */

@@ -93,17 +93,17 @@ const goToWelcome = () => {
 }
 
 .landing-studio {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 6rem;
+  line-height: 4rem;
   color: #f4f5f7;
 }
 
 .landing-tagline {
   margin-top: 0.25rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
   line-height: 1.2rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0em;
+  text-transform: capitalize;
   color: #c3c6d0;
   display: flex;
   align-items: center;
