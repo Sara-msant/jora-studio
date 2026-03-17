@@ -1,14 +1,12 @@
-import type { DirectiveBinding } from 'vue'
+const handleContextMenu = (event: Event) => {
+  event.preventDefault()
+}
 
 export default {
   mounted(el: HTMLElement) {
-    el.addEventListener('contextmenu', (e: Event) => {
-      e.preventDefault()
-    })
+    el.addEventListener('contextmenu', handleContextMenu)
   },
   unmounted(el: HTMLElement) {
-    el.removeEventListener('contextmenu', (e: Event) => {
-      e.preventDefault()
-    })
+    el.removeEventListener('contextmenu', handleContextMenu)
   },
 } as const

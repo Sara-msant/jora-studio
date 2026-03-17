@@ -21,6 +21,7 @@
 </template>
 
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -28,11 +29,22 @@ const router = useRouter()
 const goToWelcome = () => {
   router.push({ name: 'welcome' })
 }
+
+const toggleScrollLock = (enabled: boolean) => {
+  if (typeof document === 'undefined') return
+  const method = enabled ? 'add' : 'remove'
+  document.body.classList[method]('lock-scroll')
+  document.documentElement.classList[method]('lock-scroll')
+}
+
+onMounted(() => toggleScrollLock(true))
+onBeforeUnmount(() => toggleScrollLock(false))
 </script>
 
 <style scoped>
 .landing {
   min-height: 100vh;
+  min-height: 100svh;
   width: 100%;
   background-color: #262a36;
   display: flex;

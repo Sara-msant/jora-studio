@@ -1,5 +1,5 @@
 <template>
-  <PageWrapper>
+  <PageWrapper lock-scroll>
     <div class="portfolio-grid-wrapper">
       <Carousel
         :key="isMobile ? 'mobile' : 'desktop'"
@@ -21,7 +21,12 @@
             </article>
 
             <article v-if="col.bottom" class="portfolio-card" @click="goToProject(col.bottom)">
-              <img v-no-right-click :src="col.bottom.cover" :alt="col.bottom.title" draggable="false" />
+              <img
+                v-no-right-click
+                :src="col.bottom.cover"
+                :alt="col.bottom.title"
+                draggable="false"
+              />
 
               <div class="portfolio-card-overlay">
                 <div class="portfolio-card-overlay-content">
@@ -142,6 +147,7 @@ if (typeof window !== 'undefined') {
   flex: 1;
   min-height: 0;
   height: calc(100vh - var(--header-h) - 8rem);
+  height: calc(100svh - var(--header-h) - 8rem);
   position: relative;
   overflow: hidden;
 }
@@ -275,6 +281,10 @@ if (typeof window !== 'undefined') {
 
 /* ===== Mobile (< 600px) ===== */
 @media (max-width: 600px) {
+  .portfolio-grid-wrapper {
+    overscroll-behavior: contain;
+  }
+
   /* Carousel Track - let carousel handle scrolling naturally */
   .portfolio-carousel :deep(.carousel__track) {
     padding: 0;

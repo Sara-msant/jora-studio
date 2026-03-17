@@ -1,5 +1,5 @@
 <template>
-  <PageWrapper header-is-white :style="joraStyle">
+  <PageWrapper header-is-white lock-scroll :style="joraStyle">
     <main class="content">
       <p ref="typeTarget" class="text typewriter-js"></p>
     </main>

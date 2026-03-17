@@ -1,5 +1,5 @@
 <template>
-  <PageWrapper>
+  <PageWrapper lock-scroll>
     <div class="services-grid-wrapper">
       <section class="steps">
         <div class="accordion">
