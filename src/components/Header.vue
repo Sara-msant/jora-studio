@@ -1,7 +1,7 @@
 <template>
   <header class="jora-header" :class="{ 'jora-white': isWhite }">
     <div class="jora-logo" @click="goHome">
-      <div class="logo-main">JORA.</div>
+      <div class="logo-main">JORA<span class="logo-dot">.</span></div>
       <div class="logo-sub">Studio</div>
       <div class="logo-tagline">Architecture & Interiors</div>
     </div>
@@ -116,5 +116,9 @@ const goHome = () => {
   .jora-header {
     margin: 1rem 1.5rem;
   }
+}
+
+.logo-dot {
+  color: #007bff; 
 }
 </style>
