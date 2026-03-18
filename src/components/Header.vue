@@ -2,8 +2,6 @@
   <header class="jora-header" :class="{ 'jora-white': isWhite }">
     <div class="jora-logo" @click="goHome">
       <div class="logo-main">JORA<span class="logo-dot">.</span></div>
-      <div class="logo-sub">Studio</div>
-      <div class="logo-tagline">Architecture & Interiors</div>
     </div>
 
     <button class="jora-menu" type="button" aria-label="Open menu" @click="isMenuOpen = true">
@@ -45,7 +43,7 @@ const goHome = () => {
 .jora-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   z-index: 9999;
   color: #323542;
@@ -54,35 +52,15 @@ const goHome = () => {
 }
 
 .jora-logo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
   cursor: pointer;
 }
 
 .logo-main {
   font-weight: 700;
+  align-items: center;
   font-size: 2.75rem;
   line-height: 2.75rem;
 }
-
-.logo-sub {
-  font-size: 1.8rem;
-  line-height: 1.8rem;
-  font-family: 'Alumni Sans', sans-serif;
-}
-
-.logo-tagline {
-  font-size: 1rem;
-  line-height: 0.5rem;
-  letter-spacing: 0em;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: 'Alumni Sans', sans-serif;
-}
-
 .jora-menu {
   width: 2rem;
   height: 2rem;
@@ -93,7 +71,6 @@ const goHome = () => {
   justify-content: center;
   gap: 0.25rem;
   cursor: pointer;
-  align-self: center;
 }
 
 .jora-menu span {
@@ -119,6 +96,6 @@ const goHome = () => {
 }
 
 .logo-dot {
-  color: #007bff; 
+  color: #76C1FF; 
 }
 </style>
