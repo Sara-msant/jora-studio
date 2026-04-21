@@ -103,8 +103,19 @@
             "folder": "20-Comprida",
             "order": 20,
             "slug": "arq-p18"
-        }
+        },
 
+             {
+            "folder": "21-DR",
+            "order": 21,
+            "slug": "arq-p19"
+        },
+
+               {
+            "folder": "22-Alba",
+            "order": 22,
+            "slug": "arq-p20"
+        }
         
         
 

@@ -48,7 +48,7 @@ onMounted(() => {
 }
 
 .content {
-  color: white;
+  color: rgb(255, 255, 255);
   flex: 1;
   display: flex;
   max-width: 80%;
